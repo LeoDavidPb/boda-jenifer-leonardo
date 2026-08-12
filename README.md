@@ -51,3 +51,6 @@ Corrección móvil del itinerario: fondo claro marfil/azul hielo, camino serpent
 
 
 Versión de validación: itinerario simplificado. Se eliminan todas las decoraciones y formas adicionales; solo queda la línea serpenteante dorada, iconos lineales y textos.
+
+
+Ajuste: camino serpenteante con curvas más pronunciadas, mayor separación respecto de los bloques de texto y mejor adaptación a smartphone.
