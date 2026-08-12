@@ -87,3 +87,10 @@ Ubicación de ceremonia afinada: Parroquia de San Felipe Apóstol, Cra. 32 #71 S
 
 
 Ajuste visual: el botón Continuar de la sección Ceremonia ahora se reconoce claramente como CTA, manteniendo la estética marfil/azul marino/dorado.
+
+
+## Revisión de coherencia visual
+- Recepción rediseñada con lenguaje editorial nocturno, hora actualizada a 5:00 p. m. y lugar marcado como pendiente.
+- Información actualizada con datos reales de ceremonia, hora de recepción y notas prácticas.
+- Botones principales/secundarios armonizados en dos familias visuales.
+- Se conserva la limpieza técnica del CSS para una fase final, como se acordó.

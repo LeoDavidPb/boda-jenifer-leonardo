@@ -3117,3 +3117,307 @@ section#emotional .emotional-next:active{
     font-size:8.5px !important;
   }
 }
+
+/* =========================================================
+   REVISIÓN DE COHERENCIA — RECEPCIÓN + INFO + CTAs
+   ========================================================= */
+
+/* ---------- Familias de CTA ---------- */
+.journey-cta{
+  min-height:48px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:8px !important;
+  padding:12px 23px !important;
+  border-radius:999px !important;
+  font:500 9px "Montserrat",sans-serif !important;
+  letter-spacing:.12em !important;
+  text-transform:uppercase !important;
+  cursor:pointer !important;
+  transition:transform .22s ease,background .22s ease,box-shadow .22s ease !important;
+}
+.journey-cta span{display:inline-block}
+.journey-cta:hover{transform:translateY(-1px)}
+.journey-cta:active{transform:scale(.985)}
+
+.journey-cta-light{
+  border:1px solid rgba(183,137,63,.72) !important;
+  background:rgba(255,255,255,.48) !important;
+  color:#0b2344 !important;
+  box-shadow:
+    0 7px 18px rgba(11,35,68,.055),
+    inset 0 0 0 1px rgba(255,255,255,.40) !important;
+}
+.journey-cta-light:hover{
+  background:rgba(255,255,255,.76) !important;
+  box-shadow:0 9px 22px rgba(11,35,68,.08) !important;
+}
+.journey-cta-primary{
+  border:1px solid #0b2344 !important;
+  background:#0b2344 !important;
+  color:#f8f4ec !important;
+  box-shadow:0 9px 24px rgba(11,35,68,.12) !important;
+}
+.journey-cta-dark{
+  border:1px solid rgba(215,183,121,.72) !important;
+  background:rgba(7,26,51,.30) !important;
+  color:#f8f4ec !important;
+  box-shadow:
+    0 8px 22px rgba(0,0,0,.10),
+    inset 0 0 0 1px rgba(255,255,255,.025) !important;
+  backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
+}
+.journey-cta-dark:hover{
+  background:rgba(11,35,68,.54) !important;
+}
+
+/* Remove legacy pseudo-lines from emotional CTA now that all CTAs share a family */
+.emotional-next.journey-cta::before,
+.emotional-next.journey-cta::after{
+  display:none !important;
+  content:none !important;
+}
+
+/* ---------- Recepción renovada ---------- */
+.reception-editorial{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  min-height:100svh;
+  background:
+    radial-gradient(circle at 50% 14%,rgba(48,83,118,.30),transparent 32%),
+    linear-gradient(180deg,#102f52 0%,#0a2544 55%,#061a31 100%) !important;
+  color:#f8f4ec;
+}
+.reception-night{
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  opacity:.15;
+  background:
+    repeating-linear-gradient(8deg,transparent 0 5px,rgba(255,255,255,.018) 6px),
+    repeating-linear-gradient(95deg,transparent 0 8px,rgba(255,255,255,.011) 9px);
+}
+.reception-content{
+  position:relative;
+  z-index:2;
+  width:min(90%,660px);
+  min-height:100svh;
+  box-sizing:border-box;
+  padding:68px 22px 56px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.reception-kicker{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:13px;
+  margin-bottom:15px;
+}
+.reception-kicker p{
+  margin:0;
+  color:#d8c59d;
+  font:500 9px "Montserrat",sans-serif;
+  letter-spacing:.24em;
+}
+.reception-kicker span{
+  width:35px;height:1px;
+  background:linear-gradient(90deg,transparent,#d7b779);
+}
+.reception-kicker span:last-child{
+  background:linear-gradient(90deg,#d7b779,transparent);
+}
+.reception-script{
+  margin:4px 0 0;
+  color:#d7b779;
+  font:400 clamp(31px,6vw,43px)/1 "Great Vibes","Cormorant Garamond",serif;
+}
+.reception-editorial h3{
+  margin:5px 0 18px;
+  color:#fffaf3;
+  font:400 clamp(72px,15vw,112px)/.78 "Great Vibes","Cormorant Garamond",serif;
+}
+.reception-copy{
+  margin:0;
+  color:#cad4dd;
+  font:400 clamp(19px,3.5vw,26px)/1.35 "Cormorant Garamond",serif;
+}
+.reception-divider{
+  display:flex;align-items:center;justify-content:center;gap:12px;
+  margin:28px 0;
+  color:#d7b779;
+}
+.reception-divider span{
+  width:52px;height:1px;background:linear-gradient(90deg,transparent,#d7b779);
+}
+.reception-divider span:last-child{
+  background:linear-gradient(90deg,#d7b779,transparent);
+}
+.reception-divider b{font:400 13px "Cormorant Garamond",serif}
+.reception-details{
+  width:min(100%,480px);
+  display:grid;
+  grid-template-columns:1.5fr .8fr;
+  border-top:1px solid rgba(215,183,121,.35);
+  border-bottom:1px solid rgba(215,183,121,.35);
+}
+.reception-details div{
+  padding:18px 18px;
+}
+.reception-details div + div{
+  border-left:1px solid rgba(215,183,121,.25);
+}
+.reception-details small{
+  display:block;
+  color:#d3bb8c;
+  font:500 8px "Montserrat",sans-serif;
+  letter-spacing:.19em;
+}
+.reception-details strong{
+  display:block;
+  margin-top:8px;
+  color:#fffaf3;
+  font:500 24px/1.1 "Cormorant Garamond",serif;
+}
+.reception-note{
+  max-width:390px;
+  margin:17px auto 24px;
+  color:#9fadb9;
+  font:italic 15px/1.35 "Cormorant Garamond",serif;
+}
+
+.reception-linework{
+  position:absolute;
+  z-index:0;
+  width:110px;
+  height:410px;
+  top:34%;
+  opacity:.25;
+  pointer-events:none;
+}
+.linework-left{left:-22px;transform:rotate(-8deg)}
+.linework-right{right:-22px;transform:scaleX(-1) rotate(-8deg)}
+.r-stem{
+  position:absolute;left:45px;bottom:0;width:1px;height:395px;
+  background:linear-gradient(0deg,#d7b779,rgba(215,183,121,.25) 80%,transparent);
+  transform:rotate(8deg);transform-origin:bottom;
+}
+.r-leaf{
+  position:absolute;width:34px;height:14px;
+  border:1px solid rgba(215,183,121,.70);
+  border-radius:100% 0 100% 0;
+}
+.rl1{left:43px;bottom:50px;transform:rotate(-28deg)}
+.rl2{left:13px;bottom:118px;transform:rotate(150deg) scale(.9)}
+.rl3{left:54px;bottom:188px;transform:rotate(-22deg)}
+.rl4{left:20px;bottom:260px;transform:rotate(154deg) scale(.88)}
+.rl5{left:58px;bottom:330px;transform:rotate(-17deg) scale(.8)}
+
+/* ---------- Información actualizada ---------- */
+.info-editorial{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  background:
+    radial-gradient(circle at 50% 9%,rgba(255,255,255,.96),transparent 34%),
+    linear-gradient(180deg,#f8f5ee 0%,#eef3f5 52%,#f7f3eb 100%) !important;
+}
+.info-paper{
+  position:absolute;inset:0;z-index:-2;opacity:.11;
+  background:
+    repeating-linear-gradient(8deg,transparent 0 5px,rgba(11,35,68,.020) 6px),
+    repeating-linear-gradient(95deg,transparent 0 8px,rgba(11,35,68,.012) 9px);
+}
+.info-content{
+  width:min(90%,650px);
+  padding:64px 20px 54px;
+  box-sizing:border-box;
+}
+.info-kicker{
+  display:flex;align-items:center;justify-content:center;gap:13px;margin-bottom:14px;
+}
+.info-kicker p{
+  margin:0;color:#758394;font:500 9px "Montserrat",sans-serif;letter-spacing:.24em;
+}
+.info-kicker span{
+  width:36px;height:1px;background:linear-gradient(90deg,transparent,#c6a15f);
+}
+.info-kicker span:last-child{background:linear-gradient(90deg,#c6a15f,transparent)}
+.info-editorial .info-title{
+  margin:0;
+  color:#0b2344;
+  font:500 clamp(54px,12vw,80px)/.92 "Cormorant Garamond",serif;
+}
+.info-intro{
+  max-width:470px;
+  margin:18px auto 0;
+  color:#6f7b88;
+  font:400 19px/1.4 "Cormorant Garamond",serif;
+}
+.info-accordion{
+  margin-top:34px;
+}
+.info-accordion .accordion-item{
+  color:#0b2344;
+  font:500 18px "Cormorant Garamond",serif;
+}
+.info-accordion .accordion-item i{
+  color:#b7893f;
+}
+.info-accordion .accordion-panel p{
+  color:#6d7884;
+  font:400 16px/1.5 "Cormorant Garamond",serif;
+}
+.info-accordion .accordion-panel strong{
+  color:#0b2344;
+  font-weight:600;
+}
+
+@media(max-width:600px){
+  .journey-cta{
+    min-height:49px !important;
+    padding:12px 21px !important;
+    font-size:8.5px !important;
+  }
+  .reception-content{
+    width:100%;
+    padding:58px 22px 50px;
+  }
+  .reception-editorial h3{
+    font-size:clamp(68px,19vw,90px);
+  }
+  .reception-details{
+    grid-template-columns:1fr;
+    width:100%;
+  }
+  .reception-details div{
+    padding:14px 8px;
+  }
+  .reception-details div + div{
+    border-left:0;
+    border-top:1px solid rgba(215,183,121,.22);
+  }
+  .reception-linework{
+    width:65px;height:320px;opacity:.14;
+  }
+  .linework-left{left:-32px}.linework-right{right:-32px}
+  .r-stem{left:28px;height:305px}
+  .r-leaf{width:23px;height:10px}
+  .rl1{left:26px;bottom:42px}.rl2{left:7px;bottom:94px}
+  .rl3{left:32px;bottom:148px}.rl4{left:10px;bottom:205px}.rl5{left:34px;bottom:260px}
+
+  .info-content{
+    width:100%;
+    padding:58px 22px 48px;
+  }
+  .info-editorial .info-title{
+    font-size:clamp(50px,14vw,68px);
+  }
+  .info-intro{font-size:18px}
+}
