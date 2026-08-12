@@ -466,3 +466,254 @@ body{background:var(--navy-950)}
   .elegant-countdown .count-card span{font-size:5.8px;letter-spacing:.05em}
   .elegant-countdown .count-card:not(:last-child) span::after{right:-5px;width:3px;height:3px;box-shadow:0 7px 0 #c69c53}
 }
+
+
+/* =========================================================
+   JARDÍN NOCTURNO MINIMALISTA — SEGUNDA PANTALLA
+   ========================================================= */
+
+.story{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 34%,rgba(42,78,112,.28),transparent 36%),
+    linear-gradient(180deg,#102f52 0%,#0a2544 52%,#061b33 100%);
+  color:#f8f4ec;
+}
+.story .landscape,
+.story .mountain,
+.story .meadow,
+.story .house,
+.story .moon{
+  display:none!important;
+}
+.story::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  opacity:.18;
+  background:
+    repeating-linear-gradient(8deg,transparent 0 5px,rgba(255,255,255,.018) 6px),
+    repeating-linear-gradient(96deg,transparent 0 8px,rgba(255,255,255,.012) 9px);
+}
+.story::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:0;
+  height:25%;
+  z-index:-1;
+  background:linear-gradient(180deg,transparent,rgba(2,13,27,.28));
+}
+
+.night-garden{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  overflow:hidden;
+}
+.garden-glow{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(2px);
+  opacity:.14;
+}
+.glow-one{
+  width:340px;height:340px;
+  left:-190px;top:7%;
+  background:radial-gradient(circle,rgba(215,183,121,.35),transparent 68%);
+}
+.glow-two{
+  width:420px;height:420px;
+  right:-250px;bottom:3%;
+  background:radial-gradient(circle,rgba(110,145,177,.32),transparent 70%);
+}
+
+/* polvo dorado muy discreto */
+.gold-dust{
+  position:absolute;
+  width:3px;height:3px;
+  border-radius:50%;
+  background:#d7b779;
+  box-shadow:
+    31px 52px 0 rgba(215,183,121,.62),
+    73px 18px 0 rgba(215,183,121,.42),
+    119px 87px 0 rgba(215,183,121,.55),
+    162px 35px 0 rgba(215,183,121,.34),
+    208px 112px 0 rgba(215,183,121,.46),
+    252px 60px 0 rgba(215,183,121,.28);
+  opacity:.42;
+  animation:gardenDust 8s ease-in-out infinite alternate;
+}
+.dust-one{left:8%;top:12%}
+.dust-two{right:10%;bottom:18%;transform:rotate(180deg)}
+@keyframes gardenDust{
+  from{transform:translateY(0);opacity:.28}
+  to{transform:translateY(-9px);opacity:.48}
+}
+
+/* ramas botánicas laterales hechas únicamente con CSS */
+.garden-branch{
+  position:absolute;
+  width:145px;
+  height:520px;
+  bottom:-75px;
+  opacity:.82;
+  transform-origin:bottom center;
+  animation:gardenSway 7s ease-in-out infinite alternate;
+}
+.garden-left{left:-25px;transform:rotate(-8deg)}
+.garden-right{
+  right:-25px;
+  transform:scaleX(-1) rotate(-8deg);
+  animation-name:gardenSwayRight;
+}
+.garden-stem{
+  position:absolute;
+  left:60px;
+  bottom:0;
+  width:1px;
+  height:500px;
+  background:linear-gradient(0deg,#b98e47 0 76%,rgba(215,183,121,.12) 100%);
+  transform:rotate(11deg);
+  transform-origin:bottom;
+}
+.g-leaf{
+  position:absolute;
+  width:42px;
+  height:18px;
+  border:1px solid rgba(215,183,121,.88);
+  border-radius:100% 0 100% 0;
+  background:linear-gradient(145deg,rgba(215,183,121,.10),rgba(215,183,121,.015));
+  transform-origin:100% 50%;
+}
+.g-leaf::after{
+  content:"";
+  position:absolute;
+  left:5px;right:5px;top:50%;
+  height:1px;
+  background:rgba(215,183,121,.42);
+}
+.gl1{left:55px;bottom:54px;transform:rotate(-29deg)}
+.gl2{left:18px;bottom:105px;transform:rotate(150deg) scale(.9)}
+.gl3{left:70px;bottom:158px;transform:rotate(-24deg) scale(1.05)}
+.gl4{left:24px;bottom:211px;transform:rotate(153deg) scale(.86)}
+.gl5{left:78px;bottom:266px;transform:rotate(-20deg)}
+.gl6{left:32px;bottom:320px;transform:rotate(156deg) scale(.92)}
+.gl7{left:83px;bottom:370px;transform:rotate(-17deg) scale(.86)}
+.gl8{left:43px;bottom:418px;transform:rotate(159deg) scale(.78)}
+.gl9{left:85px;bottom:458px;transform:rotate(-12deg) scale(.66)}
+
+@keyframes gardenSway{
+  from{transform:rotate(-9deg)}
+  to{transform:rotate(-5deg)}
+}
+@keyframes gardenSwayRight{
+  from{transform:scaleX(-1) rotate(-9deg)}
+  to{transform:scaleX(-1) rotate(-5deg)}
+}
+
+/* contenido por encima del jardín */
+.story .content{
+  position:relative;
+  z-index:2;
+}
+.story .monogram{
+  color:#d7b779;
+  letter-spacing:.34em;
+  animation:gardenFade .9s ease both .15s;
+}
+.story h2{
+  color:#fffaf3;
+  text-shadow:0 3px 18px rgba(0,0,0,.14);
+  animation:gardenFade 1.15s ease both .35s;
+}
+.story .script{
+  color:#ead7ad;
+  animation:gardenFade 1.15s ease both .7s;
+}
+@keyframes gardenFade{
+  from{opacity:0;transform:translateY(14px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* botón más editorial: transparente, dorado y ligero */
+.story .garden-continue{
+  position:relative;
+  margin-top:30px;
+  padding:12px 34px;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  color:#f7ead0;
+  box-shadow:none;
+  letter-spacing:.08em;
+}
+.story .garden-continue::before,
+.story .garden-continue::after{
+  content:"";
+  position:absolute;
+  top:50%;
+  width:48px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#d7b779);
+}
+.story .garden-continue::before{right:100%;margin-right:12px}
+.story .garden-continue::after{
+  left:100%;margin-left:12px;
+  background:linear-gradient(90deg,#d7b779,transparent);
+}
+.story .garden-continue:hover{
+  transform:translateY(-2px);
+  background:transparent;
+}
+.story .garden-continue{
+  animation:gardenFade 1s ease both 1s;
+}
+
+/* smartphone */
+@media(max-width:600px){
+  .story{
+    min-height:100svh;
+    padding-left:22px;
+    padding-right:22px;
+  }
+  .garden-branch{
+    width:100px;
+    height:390px;
+    bottom:-55px;
+    opacity:.66;
+  }
+  .garden-left{left:-38px}
+  .garden-right{right:-38px}
+  .garden-stem{left:45px;height:375px}
+  .g-leaf{width:31px;height:14px}
+  .gl1{left:42px;bottom:42px}.gl2{left:15px;bottom:82px}
+  .gl3{left:50px;bottom:124px}.gl4{left:18px;bottom:166px}
+  .gl5{left:54px;bottom:207px}.gl6{left:23px;bottom:250px}
+  .gl7{left:57px;bottom:291px}.gl8{left:29px;bottom:328px}
+  .gl9{left:59px;bottom:354px}
+  .story h2{
+    font-size:clamp(38px,11vw,54px);
+    line-height:1.02;
+  }
+  .story .script{
+    font-size:clamp(27px,8vw,38px);
+  }
+  .story .garden-continue{
+    margin-top:27px;
+    padding-left:20px;
+    padding-right:20px;
+  }
+  .story .garden-continue::before,
+  .story .garden-continue::after{
+    width:30px;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .garden-branch,.gold-dust,.story .monogram,.story h2,.story .script,.story .garden-continue{
+    animation:none!important;
+  }
+}

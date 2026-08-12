@@ -30,3 +30,6 @@ Ajuste: contador azul marino en cuatro tarjetas y ramas laterales con hojas CSS.
 
 
 Ajuste adicional: se eliminaron únicamente los nombres Jeni & Leo de la sección Reserva la fecha. El resto del diseño permanece igual.
+
+
+Nueva pantalla: Jardín nocturno minimalista. Se eliminaron montañas, casa y luna; se añadieron ramas botánicas doradas CSS, fondo azul marino, partículas sutiles y nuevo botón Continuar.
