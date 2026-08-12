@@ -420,3 +420,49 @@ body{background:var(--navy-950)}
   .date-big-day{padding:0 10px;font-size:94px}
   .date-side-block strong{font-size:11px}
 }
+
+/* Ajuste fecha inspirado en contador azul marino con hojitas laterales */
+.date-elegant{
+  background:radial-gradient(circle at 50% 45%,#fff 0 42%,#f8f4ec 72%,#e6edf3 100%);
+  padding:60px 10px 52px;
+}
+.date-watercolor,.date-botanical{display:none!important}
+.date-corner-wash{position:absolute;z-index:0;width:210px;height:210px;opacity:.22;filter:blur(7px);background:radial-gradient(ellipse,#294b73 0 24%,#17365f 45%,#071a33 65%,transparent 72%)}
+.wash-tl{left:-130px;top:-120px}.wash-tr{right:-135px;top:-115px}.wash-bl{left:-140px;bottom:-135px}.wash-br{right:-140px;bottom:-135px}
+
+.date-leaf-branch{position:absolute;z-index:1;width:82px;height:350px;top:50%;transform:translateY(-48%);pointer-events:none;opacity:.78}
+.branch-left{left:0}.branch-right{right:0;transform:translateY(-48%) scaleX(-1)}
+.branch-stem{position:absolute;left:29px;top:10px;width:1px;height:330px;background:linear-gradient(180deg,transparent,#b68c49 10%,#b68c49 90%,transparent);transform:rotate(8deg)}
+.leaf{position:absolute;width:23px;height:10px;border:1px solid rgba(34,67,104,.75);background:linear-gradient(135deg,rgba(40,75,115,.17),rgba(11,35,68,.03));border-radius:100% 0 100% 0;transform-origin:100% 50%}
+.leaf::after{content:"";position:absolute;left:3px;right:3px;top:50%;height:1px;background:rgba(190,148,78,.55)}
+.l1{left:27px;top:30px;transform:rotate(-31deg)}.l2{left:8px;top:68px;transform:rotate(145deg) scale(.85)}
+.l3{left:34px;top:108px;transform:rotate(-24deg) scale(1.05)}.l4{left:10px;top:150px;transform:rotate(151deg) scale(.9)}
+.l5{left:36px;top:192px;transform:rotate(-20deg) scale(1.08)}.l6{left:12px;top:235px;transform:rotate(154deg) scale(.92)}
+.l7{left:38px;top:278px;transform:rotate(-18deg) scale(.94)}.l8{left:18px;top:315px;transform:rotate(158deg) scale(.76)}
+
+.date-top-ornament{display:flex;align-items:center;justify-content:center;gap:12px;color:#b7893f;margin-bottom:12px}
+.date-top-ornament span{width:42px;height:1px;background:linear-gradient(90deg,transparent,#c6a15f)}
+.date-top-ornament span:last-child{background:linear-gradient(90deg,#c6a15f,transparent)}
+.date-top-ornament b{font:400 25px "Cormorant Garamond",serif}
+
+.elegant-countdown{width:min(96vw,650px);grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:0 auto 28px}
+.elegant-countdown .count-card{position:relative;min-height:138px;padding:31px 4px 15px;border:1px solid #d7b779;border-radius:20px 20px 16px 16px;background:radial-gradient(circle at 50% 0,#183b62 0,#102e55 34%,#06192f 100%);box-shadow:inset 0 0 0 3px rgba(215,183,121,.08),0 12px 24px rgba(7,26,51,.13);overflow:visible}
+.elegant-countdown .count-card::before{content:"❧";position:absolute;top:7px;left:50%;transform:translateX(-50%);color:#d7b779;font:16px "Cormorant Garamond",serif}
+.elegant-countdown .count-card::after{content:"";position:absolute;inset:5px;border:1px solid rgba(215,183,121,.32);border-radius:16px 16px 12px 12px}
+.elegant-countdown .count-card b{display:block;margin:4px 0 8px;font:500 clamp(32px,7.5vw,50px)/1 "Cormorant Garamond",serif;color:#fffaf1}
+.elegant-countdown .count-card span{display:block;font-size:7px;letter-spacing:.1em;color:#e0bd76;white-space:nowrap}
+.elegant-countdown .count-card:not(:last-child) span::after{content:"";position:absolute;right:-8px;top:50%;width:4px;height:4px;border-radius:50%;background:#c69c53;box-shadow:0 9px 0 #c69c53}
+
+.date-elegant-content{width:min(90%,690px)}
+@media(max-width:600px){
+  .date-elegant{padding:52px 6px 44px}
+  .date-leaf-branch{width:55px;height:310px;opacity:.52}.branch-left{left:-13px}.branch-right{right:-13px}.branch-stem{left:23px;height:290px}
+  .leaf{width:18px;height:9px}.l1{left:20px}.l2{left:5px}.l3{left:23px}.l4{left:6px}.l5{left:24px}.l6{left:7px}.l7{left:25px}.l8{left:10px}
+  .elegant-countdown{width:min(98vw,390px);grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}
+  .elegant-countdown .count-card{min-height:110px;padding:25px 1px 10px;border-radius:15px 15px 12px 12px}
+  .elegant-countdown .count-card::before{top:5px;font-size:12px}
+  .elegant-countdown .count-card::after{inset:4px;border-radius:12px 12px 9px 9px}
+  .elegant-countdown .count-card b{font-size:clamp(28px,8.1vw,39px)}
+  .elegant-countdown .count-card span{font-size:5.8px;letter-spacing:.05em}
+  .elegant-countdown .count-card:not(:last-child) span::after{right:-5px;width:3px;height:3px;box-shadow:0 7px 0 #c69c53}
+}

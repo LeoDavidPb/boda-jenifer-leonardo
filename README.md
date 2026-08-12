@@ -24,3 +24,6 @@ git push
 
 ## Cambio adicional
 Se rediseñó la sección “Reserva la fecha” con composición Jeni & Leo, azul marino, marfil y dorado, manteniendo el contador dinámico y los botones existentes.
+
+
+Ajuste: contador azul marino en cuatro tarjetas y ramas laterales con hojas CSS.
