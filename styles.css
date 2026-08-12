@@ -1468,3 +1468,201 @@ body{background:var(--navy-950)}
   .light-garden-itinerary .winding-copy h4{font-size:21px}
   .light-garden-itinerary .winding-copy p:last-child{font-size:11.5px}
 }
+
+/* =========================================================
+   VALIDACIÓN ITINERARIO — SOLO LÍNEA SERPENTEANTE
+   Se eliminan decoraciones laterales y formas adicionales.
+   ========================================================= */
+.simple-path-itinerary{
+  background:#f5f1e9 !important;
+}
+
+/* Quitar absolutamente toda decoración ajena a la línea */
+.simple-path-itinerary .winding-garden,
+.simple-path-itinerary .night-bloom,
+.simple-path-itinerary .winding-leaves,
+.simple-path-itinerary::before{
+  display:none !important;
+}
+
+/* Camino serpenteante: único elemento decorativo */
+.simple-path-itinerary .winding-path-svg{
+  display:block !important;
+  left:50%;
+  width:54px;
+  transform:translateX(-50%);
+  z-index:1;
+}
+.simple-path-itinerary .winding-path-svg path{
+  stroke:#b58a47;
+  stroke-width:1.45;
+  opacity:.9;
+  filter:none;
+}
+
+/* Contenido limpio */
+.simple-path-itinerary .winding-content{
+  position:relative;
+  z-index:2;
+}
+.simple-path-itinerary .winding-title{
+  color:#0b2344;
+  text-shadow:none;
+}
+.simple-path-itinerary .winding-subtitle{
+  color:#6f7982;
+}
+
+/* Iconos sin círculos, fondos, sombras ni marcos */
+.simple-path-itinerary .winding-icon{
+  width:34px;
+  height:34px;
+  flex-basis:34px;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+  color:#b58a47;
+}
+.simple-path-itinerary .winding-icon svg{
+  width:27px;
+  height:27px;
+  stroke-width:1.05;
+}
+
+/* Quitar puntos/triángulos/elementos auxiliares */
+.simple-path-itinerary .winding-item::after,
+.simple-path-itinerary .winding-copy::before{
+  display:none !important;
+}
+
+/* Eventos sin cajas, fondos o polígonos */
+.simple-path-itinerary .winding-item{
+  background:none !important;
+  clip-path:none !important;
+}
+.simple-path-itinerary .winding-copy{
+  background:none !important;
+  border:0 !important;
+  box-shadow:none !important;
+  padding-top:0;
+  padding-bottom:0;
+}
+.simple-path-itinerary .winding-copy .timeline-time{
+  color:#a77b37;
+}
+.simple-path-itinerary .winding-copy h4{
+  color:#0b2344;
+}
+.simple-path-itinerary .winding-copy p:last-child{
+  color:#71808d;
+}
+.simple-path-itinerary .itinerary-note{
+  color:#7a838c;
+}
+.simple-path-itinerary .text-next{
+  color:#0b2344;
+}
+
+/* Mobile-first: dejar un corredor central fijo para la línea */
+@media(max-width:600px){
+  .simple-path-itinerary{
+    padding-left:0;
+    padding-right:0;
+  }
+  .simple-path-itinerary .winding-content{
+    width:100%;
+    max-width:430px;
+    margin:0 auto;
+    padding:48px 18px 44px;
+    box-sizing:border-box;
+  }
+  .simple-path-itinerary .winding-timeline{
+    width:100%;
+    height:900px;
+    margin:32px auto 20px;
+    position:relative;
+  }
+
+  .simple-path-itinerary .winding-path-svg{
+    width:48px;
+  }
+
+  /* Cada lado ocupa menos del 40%, dejando aire al centro */
+  .simple-path-itinerary .winding-item{
+    width:39%;
+    display:block;
+  }
+  .simple-path-itinerary .winding-item.left{
+    left:0;
+    padding-right:0;
+    text-align:right;
+  }
+  .simple-path-itinerary .winding-item.right{
+    right:0;
+    padding-left:0;
+    text-align:left;
+  }
+
+  /* Icono encima del texto, hacia el centro pero sin invadir la línea */
+  .simple-path-itinerary .winding-icon{
+    position:static;
+    display:inline-grid;
+    place-items:center;
+    margin-bottom:7px;
+  }
+  .simple-path-itinerary .winding-item.left .winding-icon{
+    margin-left:auto;
+  }
+  .simple-path-itinerary .winding-item.right .winding-icon{
+    margin-right:auto;
+  }
+
+  .simple-path-itinerary .winding-copy{
+    width:100%;
+    padding:0 !important;
+  }
+  .simple-path-itinerary .winding-copy .timeline-time{
+    font-size:7px;
+    letter-spacing:.11em;
+    white-space:nowrap;
+    margin-bottom:4px;
+  }
+  .simple-path-itinerary .winding-copy h4{
+    font-size:clamp(21px,6vw,26px);
+    line-height:.98;
+    word-break:normal;
+    overflow-wrap:normal;
+  }
+  .simple-path-itinerary .winding-copy p:last-child{
+    font-size:12px;
+    line-height:1.25;
+    margin-top:6px;
+  }
+
+  .simple-path-itinerary .item-1{top:1%}
+  .simple-path-itinerary .item-2{top:18%}
+  .simple-path-itinerary .item-3{top:35%}
+  .simple-path-itinerary .item-4{top:52%}
+  .simple-path-itinerary .item-5{top:69%}
+  .simple-path-itinerary .item-6{top:86%}
+}
+
+@media(max-width:380px){
+  .simple-path-itinerary .winding-content{
+    padding-left:14px;
+    padding-right:14px;
+  }
+  .simple-path-itinerary .winding-timeline{
+    height:930px;
+  }
+  .simple-path-itinerary .winding-item{
+    width:38%;
+  }
+  .simple-path-itinerary .winding-copy h4{
+    font-size:20px;
+  }
+  .simple-path-itinerary .winding-copy p:last-child{
+    font-size:11px;
+  }
+}

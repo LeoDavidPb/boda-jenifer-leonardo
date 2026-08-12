@@ -48,3 +48,6 @@ Rediseño del itinerario: camino serpenteante alternando eventos a izquierda y d
 
 
 Corrección móvil del itinerario: fondo claro marfil/azul hielo, camino serpenteante estrecho, eventos alternados sin superposición y decoración botánica más ligera.
+
+
+Versión de validación: itinerario simplificado. Se eliminan todas las decoraciones y formas adicionales; solo queda la línea serpenteante dorada, iconos lineales y textos.
