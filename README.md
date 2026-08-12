@@ -33,3 +33,9 @@ Ajuste adicional: se eliminaron únicamente los nombres Jeni & Leo de la secció
 
 
 Nueva pantalla: Jardín nocturno minimalista. Se eliminaron montañas, casa y luna; se añadieron ramas botánicas doradas CSS, fondo azul marino, partículas sutiles y nuevo botón Continuar.
+
+
+Se agregó sección Itinerario entre Recepción y RSVP: Ceremonia, Recepción, Sesión de fotos, Entrada de novios, Cena y Brindis. Solo Ceremonia conserva 6:00 p. m.; las demás horas quedan marcadas como por definir.
+
+
+Horarios provisionales del itinerario actualizados: Ceremonia 3:30 p. m.; Recepción 5:00 p. m.; Sesión de fotos 5:30 p. m.; Entrada de novios 6:30 p. m.; Cena 7:30 p. m.; Brindis 9:00 p. m.

@@ -717,3 +717,221 @@ body{background:var(--navy-950)}
     animation:none!important;
   }
 }
+
+
+/* =========================================================
+   ITINERARIO — LÍNEA DE TIEMPO EDITORIAL
+   ========================================================= */
+.itinerary{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 10%,rgba(255,255,255,.94),transparent 30%),
+    linear-gradient(165deg,#f8f5ee 0%,#edf2f5 100%);
+}
+.itinerary::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.15;
+  background:
+    repeating-linear-gradient(7deg,transparent 0 5px,rgba(11,35,68,.025) 6px),
+    repeating-linear-gradient(96deg,transparent 0 8px,rgba(11,35,68,.018) 9px);
+}
+.itinerary-content{
+  width:min(92%,760px);
+  padding-top:30px;
+  padding-bottom:34px;
+}
+.itinerary-title{
+  margin:2px 0 15px;
+  color:#0b2344;
+  font:500 clamp(48px,12vw,76px)/.92 "Cormorant Garamond",serif;
+}
+.itinerary-intro{
+  max-width:470px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.timeline{
+  position:relative;
+  width:min(100%,650px);
+  margin:42px auto 24px;
+  padding:7px 0 5px;
+}
+.timeline-line{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:50%;
+  width:1px;
+  transform:translateX(-50%);
+  background:linear-gradient(
+    180deg,
+    transparent,
+    rgba(183,137,63,.75) 7%,
+    rgba(183,137,63,.75) 93%,
+    transparent
+  );
+}
+.timeline-item{
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr 56px 1fr;
+  align-items:center;
+  min-height:145px;
+}
+.timeline-item.left .timeline-card{
+  grid-column:1;
+  text-align:right;
+  justify-self:end;
+}
+.timeline-item.right .timeline-card{
+  grid-column:3;
+  text-align:left;
+  justify-self:start;
+}
+.timeline-dot{
+  grid-column:2;
+  grid-row:1;
+  z-index:3;
+  width:38px;
+  height:38px;
+  margin:auto;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(215,183,121,.92);
+  border-radius:50%;
+  background:#f7f3eb;
+  box-shadow:
+    0 0 0 5px rgba(248,245,238,.95),
+    0 8px 20px rgba(7,26,51,.06);
+  color:#b7893f;
+}
+.timeline-dot span{
+  font:400 17px "Cormorant Garamond",serif;
+}
+.timeline-card{
+  width:min(100%,250px);
+  padding:18px 18px 16px;
+  border:1px solid rgba(23,54,95,.10);
+  border-radius:20px;
+  background:rgba(255,255,255,.66);
+  box-shadow:0 14px 32px rgba(7,26,51,.055);
+  backdrop-filter:blur(4px);
+}
+.timeline-time{
+  margin:0 0 6px;
+  color:#b7893f;
+  font-size:8px;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+}
+.timeline-card h4{
+  margin:0;
+  color:#0b2344;
+  font:500 28px/1 "Cormorant Garamond",serif;
+}
+.timeline-card p:last-child{
+  margin:8px 0 0;
+  color:#667284;
+  font:15px/1.35 "Cormorant Garamond",serif;
+}
+.itinerary-note{
+  max-width:450px;
+  margin:24px auto 4px;
+  color:#7b8390;
+  font:italic 15px/1.4 "Cormorant Garamond",serif;
+}
+
+/* ramas laterales decorativas */
+.itinerary-branch{
+  position:absolute;
+  z-index:1;
+  width:90px;
+  height:360px;
+  top:31%;
+  opacity:.38;
+  pointer-events:none;
+}
+.itinerary-branch-left{left:-20px;transform:rotate(-10deg)}
+.itinerary-branch-right{right:-20px;transform:scaleX(-1) rotate(-10deg)}
+.itinerary-stem{
+  position:absolute;
+  left:33px;
+  top:0;
+  width:1px;
+  height:350px;
+  background:linear-gradient(180deg,transparent,#b7893f 10%,#b7893f 90%,transparent);
+}
+.it-leaf{
+  position:absolute;
+  width:27px;
+  height:12px;
+  border:1px solid rgba(23,54,95,.62);
+  border-radius:100% 0 100% 0;
+  background:rgba(40,75,115,.04);
+}
+.il1{left:31px;top:40px;transform:rotate(-30deg)}
+.il2{left:8px;top:92px;transform:rotate(148deg)}
+.il3{left:38px;top:146px;transform:rotate(-24deg)}
+.il4{left:10px;top:203px;transform:rotate(153deg)}
+.il5{left:40px;top:258px;transform:rotate(-18deg)}
+.il6{left:17px;top:310px;transform:rotate(158deg)}
+
+@media(max-width:600px){
+  .itinerary{
+    padding-left:10px;
+    padding-right:10px;
+  }
+  .itinerary-title{
+    font-size:clamp(44px,12vw,60px);
+  }
+  .timeline{
+    width:min(100%,430px);
+    margin-top:34px;
+  }
+  .timeline-line{
+    left:28px;
+    transform:none;
+  }
+  .timeline-item{
+    display:grid;
+    grid-template-columns:56px 1fr;
+    min-height:132px;
+    align-items:center;
+  }
+  .timeline-item.left .timeline-card,
+  .timeline-item.right .timeline-card{
+    grid-column:2;
+    text-align:left;
+    justify-self:stretch;
+  }
+  .timeline-dot{
+    grid-column:1;
+    width:36px;
+    height:36px;
+  }
+  .timeline-card{
+    width:100%;
+    max-width:none;
+    padding:16px 17px 15px;
+    border-radius:18px;
+  }
+  .timeline-card h4{
+    font-size:26px;
+  }
+  .itinerary-branch{
+    opacity:.23;
+    width:60px;
+    height:300px;
+  }
+  .itinerary-branch-left{left:-32px}
+  .itinerary-branch-right{right:-32px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .timeline-card{backdrop-filter:none}
+}
