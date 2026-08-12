@@ -2711,3 +2711,60 @@ section#emotional .glow-bottom{
     letter-spacing:.12em !important;
   }
 }
+
+/* =========================================================
+   BOTÓN TRANSICIÓN EMOTIVA — MÁS CLARO COMO CTA
+   ========================================================= */
+section#emotional .emotional-next{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:9px !important;
+  min-height:48px !important;
+  padding:13px 25px !important;
+  border:1px solid rgba(183,137,63,.78) !important;
+  border-radius:999px !important;
+  background:rgba(255,255,255,.50) !important;
+  color:#0b2344 !important;
+  box-shadow:
+    0 7px 20px rgba(11,35,68,.07),
+    inset 0 0 0 1px rgba(255,255,255,.45) !important;
+  backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
+  font:500 10px "Montserrat",sans-serif !important;
+  letter-spacing:.13em !important;
+  text-transform:uppercase !important;
+  transition:transform .25s ease, background .25s ease, box-shadow .25s ease !important;
+}
+
+/* Quitamos las líneas laterales del CTA anterior para que el botón se lea inmediatamente */
+section#emotional .emotional-next::before,
+section#emotional .emotional-next::after{
+  display:none !important;
+  content:none !important;
+}
+
+section#emotional .emotional-next span{
+  margin-left:2px !important;
+  color:#b7893f !important;
+  font-size:14px !important;
+}
+
+section#emotional .emotional-next:hover{
+  background:rgba(255,255,255,.78) !important;
+  transform:translateY(-1px) !important;
+  box-shadow:0 9px 24px rgba(11,35,68,.10) !important;
+}
+
+section#emotional .emotional-next:active{
+  transform:scale(.98) !important;
+}
+
+@media(max-width:600px){
+  section#emotional .emotional-next{
+    min-height:50px !important;
+    padding:13px 24px !important;
+    font-size:9px !important;
+    letter-spacing:.11em !important;
+  }
+}
