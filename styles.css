@@ -2598,3 +2598,116 @@ body{background:var(--navy-950)}
     animation:none !important;
   }
 }
+
+/* =========================================================
+   CORRECCIÓN TRANSICIÓN EMOTIVA — FONDO CLARO Y LEGIBLE
+   ========================================================= */
+section#emotional.emotional-transition{
+  position:relative !important;
+  isolation:isolate !important;
+  min-height:100svh !important;
+  overflow:hidden !important;
+  background:
+    radial-gradient(circle at 50% 18%,rgba(255,255,255,.96) 0 16%,rgba(247,244,237,.68) 38%,transparent 64%),
+    linear-gradient(180deg,#f8f5ee 0%,#eef3f6 52%,#f7f3eb 100%) !important;
+  color:#0b2344 !important;
+}
+
+/* Anula cualquier fondo/overlay oscuro heredado */
+section#emotional.emotional-transition::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:-2 !important;
+  background:
+    repeating-linear-gradient(7deg,transparent 0 5px,rgba(11,35,68,.018) 6px),
+    repeating-linear-gradient(95deg,transparent 0 8px,rgba(11,35,68,.012) 9px) !important;
+  opacity:.11 !important;
+  pointer-events:none !important;
+}
+section#emotional.emotional-transition::after{
+  display:none !important;
+  content:none !important;
+}
+
+section#emotional .emotional-content{
+  position:relative !important;
+  z-index:3 !important;
+  width:min(90%,680px) !important;
+  min-height:100svh !important;
+  margin:0 auto !important;
+  padding:72px 20px !important;
+  box-sizing:border-box !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+}
+
+/* Fuerza colores visibles y coherentes */
+section#emotional .emotional-main{
+  color:#0b2344 !important;
+  opacity:1;
+}
+section#emotional .emotional-accent{
+  color:#b7893f !important;
+  opacity:1;
+}
+section#emotional .emotional-ornament,
+section#emotional .emotional-divider{
+  color:#b7893f !important;
+  opacity:1;
+}
+
+/* Botón editorial, sin apariencia de pastilla blanca */
+section#emotional .emotional-next{
+  position:relative !important;
+  z-index:4 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  color:#0b2344 !important;
+  padding:12px 22px !important;
+  font:500 11px "Montserrat",sans-serif !important;
+  letter-spacing:.14em !important;
+  text-transform:uppercase !important;
+}
+section#emotional .emotional-next::before,
+section#emotional .emotional-next::after{
+  display:block !important;
+}
+section#emotional .emotional-next span{
+  color:#b7893f !important;
+}
+
+/* El glow debe quedar detrás y nunca oscurecer el contenido */
+section#emotional .emotional-glow{
+  z-index:-1 !important;
+  opacity:.55 !important;
+}
+section#emotional .glow-top{
+  background:radial-gradient(circle,rgba(160,181,197,.16),transparent 70%) !important;
+}
+section#emotional .glow-bottom{
+  background:radial-gradient(circle,rgba(215,183,121,.10),transparent 72%) !important;
+}
+
+@media(max-width:600px){
+  section#emotional .emotional-content{
+    width:100% !important;
+    padding:64px 22px !important;
+  }
+  section#emotional .emotional-main{
+    font-size:clamp(34px,9.8vw,48px) !important;
+    line-height:1.06 !important;
+  }
+  section#emotional .emotional-accent{
+    font-size:clamp(27px,7.8vw,36px) !important;
+  }
+  section#emotional .emotional-next{
+    font-size:9px !important;
+    letter-spacing:.12em !important;
+  }
+}

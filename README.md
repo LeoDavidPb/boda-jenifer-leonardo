@@ -75,3 +75,6 @@ Cambio de cierre: se reemplazó la imitación de sello de cera por un medallón/
 
 
 Se agregó una transición emotiva entre la pantalla 'Hay momentos...' y 'Nuestra boda': frase principal, acento caligráfico, detalle dorado y botón 'Descubrir nuestra boda'. No se modificó el resto de la invitación.
+
+
+Corrección de transición emotiva: fondo claro forzado, eliminación de overlay oscuro heredado, texto legible y botón renombrado a 'Sé parte de nosotros'.
