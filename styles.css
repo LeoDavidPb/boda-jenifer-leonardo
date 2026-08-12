@@ -935,3 +935,147 @@ body{background:var(--navy-950)}
 @media(prefers-reduced-motion:reduce){
   .timeline-card{backdrop-filter:none}
 }
+
+/* =========================================================
+   ITINERARIO — JARDÍN MINIMALISTA
+   ========================================================= */
+.garden-itinerary{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  background:
+    radial-gradient(circle at 50% 10%,rgba(255,255,255,.98),transparent 33%),
+    linear-gradient(180deg,#f9f7f1 0%,#eef3f3 52%,#f7f4ed 100%);
+}
+.garden-itinerary::before{
+  content:"";
+  position:absolute; inset:0; z-index:-2; opacity:.16;
+  background:
+    repeating-linear-gradient(8deg,transparent 0 5px,rgba(11,35,68,.025) 6px),
+    repeating-linear-gradient(95deg,transparent 0 9px,rgba(11,35,68,.016) 10px);
+}
+.garden-haze{
+  position:absolute; z-index:-1; width:340px; height:340px; border-radius:50%;
+  filter:blur(16px); opacity:.15; pointer-events:none;
+  background:radial-gradient(circle,#9fb5c5,transparent 68%);
+}
+.garden-haze-a{left:-210px;top:12%}
+.garden-haze-b{right:-230px;bottom:8%}
+
+.garden-itinerary-content{width:min(90%,680px);padding:52px 0 44px}
+.garden-itinerary .itinerary-title{
+  margin:4px 0 14px;
+  color:#0b2344;
+  font:500 clamp(48px,12vw,76px)/.92 "Cormorant Garamond",serif;
+}
+.garden-itinerary .itinerary-intro{max-width:440px;margin:0 auto;color:#707b86}
+
+.garden-timeline{
+  position:relative;
+  width:min(100%,520px);
+  margin:48px auto 28px;
+  padding:2px 0;
+}
+.garden-path{
+  position:absolute; left:43px; top:20px; bottom:20px; width:1px;
+  background:linear-gradient(180deg,transparent,#b98e47 7%,#b98e47 93%,transparent);
+}
+.garden-path::before,.garden-path::after{
+  content:"";position:absolute;left:50%;width:5px;height:5px;border:1px solid #b98e47;
+  border-radius:50%;background:#f8f5ee;transform:translateX(-50%);
+}
+.garden-path::before{top:4px}.garden-path::after{bottom:4px}
+
+.garden-time-item{
+  position:relative;
+  display:grid;
+  grid-template-columns:86px 1fr;
+  align-items:center;
+  min-height:142px;
+}
+.garden-time-marker{
+  position:relative; z-index:2; display:grid; place-items:center;
+}
+.garden-time-marker::before{
+  content:"";position:absolute;width:52px;height:52px;border-radius:50%;
+  background:#f8f5ee;border:1px solid rgba(185,142,71,.62);
+  box-shadow:0 0 0 7px rgba(248,245,238,.92),0 8px 22px rgba(7,26,51,.06);
+}
+.garden-icon{
+  position:relative;z-index:2;width:26px;height:26px;display:block;color:#17365f;
+}
+.garden-icon svg{
+  width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.25;
+  stroke-linecap:round;stroke-linejoin:round;
+}
+.garden-time-copy{
+  position:relative;padding:12px 12px 12px 5px;text-align:left;
+}
+.garden-time-copy::before{
+  content:"";position:absolute;left:-17px;top:50%;width:13px;height:1px;
+  background:rgba(185,142,71,.55);
+}
+.garden-time-copy .timeline-time{
+  margin:0 0 5px;color:#b7893f;font-size:8px;letter-spacing:.17em;text-transform:uppercase;
+}
+.garden-time-copy h4{
+  margin:0;color:#0b2344;font:500 31px/1 "Cormorant Garamond",serif;
+}
+.garden-time-copy p:last-child{
+  margin:7px 0 0;max-width:330px;color:#6d7884;font:15px/1.35 "Cormorant Garamond",serif;
+}
+
+/* vegetación lateral lineal y ligera */
+.garden-edge{
+  position:absolute;z-index:0;width:105px;height:470px;top:31%;
+  opacity:.34;pointer-events:none;
+}
+.edge-left{left:-30px;transform:rotate(-7deg)}
+.edge-right{right:-30px;transform:scaleX(-1) rotate(-7deg)}
+.vine{
+  position:absolute;left:44px;bottom:0;width:1px;height:455px;
+  background:linear-gradient(0deg,rgba(23,54,95,.72),rgba(185,142,71,.65) 55%,transparent);
+  transform:rotate(8deg);transform-origin:bottom;
+}
+.edge-leaf{
+  position:absolute;width:33px;height:14px;border:1px solid rgba(23,54,95,.62);
+  border-radius:100% 0 100% 0;background:rgba(23,54,95,.025);
+}
+.edge-leaf::after{
+  content:"";position:absolute;left:5px;right:5px;top:50%;height:1px;background:rgba(185,142,71,.42);
+}
+.e1{left:40px;bottom:50px;transform:rotate(-28deg)}
+.e2{left:11px;bottom:111px;transform:rotate(150deg) scale(.9)}
+.e3{left:51px;bottom:173px;transform:rotate(-23deg)}
+.e4{left:17px;bottom:235px;transform:rotate(153deg) scale(.9)}
+.e5{left:55px;bottom:299px;transform:rotate(-19deg) scale(.92)}
+.e6{left:25px;bottom:360px;transform:rotate(157deg) scale(.82)}
+.e7{left:57px;bottom:414px;transform:rotate(-15deg) scale(.72)}
+
+.garden-itinerary .itinerary-note{
+  max-width:420px;margin:25px auto 5px;color:#7a838c;
+  font:italic 15px/1.4 "Cormorant Garamond",serif;
+}
+
+/* anulamos las tarjetas/ramas de la versión anterior solo dentro del itinerario */
+.garden-itinerary .timeline,.garden-itinerary .itinerary-branch{display:none!important}
+
+@media(max-width:600px){
+  .garden-itinerary-content{width:min(92%,500px);padding-top:45px}
+  .garden-itinerary .itinerary-title{font-size:clamp(44px,12vw,60px)}
+  .garden-timeline{width:min(100%,410px);margin-top:38px}
+  .garden-path{left:35px}
+  .garden-time-item{grid-template-columns:70px 1fr;min-height:132px}
+  .garden-time-marker::before{width:45px;height:45px;box-shadow:0 0 0 6px rgba(248,245,238,.92),0 7px 18px rgba(7,26,51,.05)}
+  .garden-icon{width:22px;height:22px}
+  .garden-time-copy{padding-left:4px}
+  .garden-time-copy::before{left:-13px;width:10px}
+  .garden-time-copy h4{font-size:28px}
+  .garden-time-copy p:last-child{font-size:14px}
+  .garden-edge{width:62px;height:340px;opacity:.20}
+  .edge-left{left:-32px}.edge-right{right:-32px}
+  .vine{left:28px;height:330px}
+  .edge-leaf{width:23px;height:10px}
+  .e1{left:25px;bottom:38px}.e2{left:6px;bottom:82px}.e3{left:31px;bottom:127px}
+  .e4{left:9px;bottom:173px}.e5{left:33px;bottom:219px}.e6{left:13px;bottom:264px}.e7{left:34px;bottom:304px}
+}

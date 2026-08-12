@@ -39,3 +39,6 @@ Se agregó sección Itinerario entre Recepción y RSVP: Ceremonia, Recepción, S
 
 
 Horarios provisionales del itinerario actualizados: Ceremonia 3:30 p. m.; Recepción 5:00 p. m.; Sesión de fotos 5:30 p. m.; Entrada de novios 6:30 p. m.; Cena 7:30 p. m.; Brindis 9:00 p. m.
+
+
+Rediseño: itinerario convertido en línea de tiempo de jardín minimalista. Iconos lineales SVG sin emojis. Horarios: 3:30, 5:00, 5:30, 6:30, 7:30 y 9:00 p. m.
