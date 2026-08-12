@@ -113,7 +113,7 @@ document.getElementById("shareButton").addEventListener("click",async()=>{
    MÚSICA DE LA INVITACIÓN
    Empieza con el gesto del usuario al tocar el sello.
    ========================================================= */
-(() => {
+document.addEventListener("DOMContentLoaded", () => {
   const music = document.getElementById("weddingMusic");
   const toggle = document.getElementById("musicToggle");
   if (!music || !toggle) return;
@@ -144,7 +144,9 @@ document.getElementById("shareButton").addEventListener("click",async()=>{
 
   const seal = document.querySelector(".navy-opening .seal") || document.querySelector(".seal");
   if (seal) {
-    seal.addEventListener("click", startWeddingMusic, { once: true });
+    const startOnGesture = () => startWeddingMusic();
+    seal.addEventListener("pointerdown", startOnGesture, { once: true });
+    seal.addEventListener("touchstart", startOnGesture, { once: true, passive: true });
   }
 
   toggle.addEventListener("click", async (event) => {
@@ -164,4 +166,4 @@ document.getElementById("shareButton").addEventListener("click",async()=>{
 
   music.addEventListener("play", () => setPlayingUI(true));
   music.addEventListener("pause", () => setPlayingUI(false));
-})();
+});;

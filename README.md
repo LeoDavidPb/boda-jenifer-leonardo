@@ -66,3 +66,6 @@ Sello de cera V3: perímetro continuo con ondulaciones más naturales, sin gotas
 
 
 Música: se añadió te-esperaba.mp3. La reproducción se inicia al tocar el sello y aparece un control flotante para pausar/reanudar. El audio está configurado en bucle y volumen inicial moderado.
+
+
+Corrección de audio: el elemento <audio> ahora carga antes de script.js y la inicialización espera DOMContentLoaded. También se inicia con el gesto directo sobre el sello para mejorar compatibilidad con Safari/iPhone.
