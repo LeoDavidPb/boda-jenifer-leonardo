@@ -2768,3 +2768,266 @@ section#emotional .emotional-next:active{
     letter-spacing:.11em !important;
   }
 }
+
+/* =========================================================
+   CEREMONIA — REDISEÑO EDITORIAL / BOTÁNICO
+   Coherente con marfil, azul marino y dorado del proyecto.
+   ========================================================= */
+.ceremony-editorial{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  min-height:100svh;
+  background:
+    radial-gradient(circle at 50% 12%,rgba(255,255,255,.95),transparent 34%),
+    linear-gradient(180deg,#f8f5ee 0%,#edf2f5 54%,#f7f3eb 100%) !important;
+  color:#0b2344;
+}
+.ceremony-editorial .texture,
+.ceremony-editorial .arch,
+.ceremony-editorial .stem{
+  display:none !important;
+}
+.ceremony-paper{
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  opacity:.12;
+  background:
+    repeating-linear-gradient(8deg,transparent 0 5px,rgba(11,35,68,.020) 6px),
+    repeating-linear-gradient(95deg,transparent 0 8px,rgba(11,35,68,.012) 9px);
+}
+.ceremony-content{
+  position:relative;
+  z-index:2;
+  width:min(90%,660px);
+  min-height:100svh;
+  padding:66px 22px 54px;
+  box-sizing:border-box;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.ceremony-kicker{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:13px;
+  margin-bottom:18px;
+}
+.ceremony-kicker p{
+  margin:0;
+  color:#718094;
+  font:500 9px "Montserrat",sans-serif;
+  letter-spacing:.25em;
+}
+.ceremony-kicker span{
+  width:34px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#c6a15f);
+}
+.ceremony-kicker span:last-child{
+  background:linear-gradient(90deg,#c6a15f,transparent);
+}
+
+.ceremony-mark{
+  width:48px;
+  height:48px;
+  margin:2px 0 14px;
+  color:#b7893f;
+}
+.ceremony-mark svg{
+  width:100%;
+  height:100%;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.15;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+.ceremony-editorial h3{
+  margin:0;
+  color:#0b2344;
+  font:500 clamp(58px,12vw,92px)/.92 "Cormorant Garamond",serif;
+  letter-spacing:-.02em;
+}
+.ceremony-copy{
+  margin:20px 0 0;
+  color:#6f7b88;
+  font:400 clamp(20px,3.5vw,27px)/1.35 "Cormorant Garamond",serif;
+}
+
+.ceremony-divider{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:13px;
+  margin:30px 0 28px;
+  color:#b7893f;
+}
+.ceremony-divider span{
+  width:52px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#c6a15f);
+}
+.ceremony-divider span:last-child{
+  background:linear-gradient(90deg,#c6a15f,transparent);
+}
+.ceremony-divider b{
+  font:400 17px "Cormorant Garamond",serif;
+}
+
+.ceremony-details{
+  width:min(100%,510px);
+  border-top:1px solid rgba(183,137,63,.35);
+  border-bottom:1px solid rgba(183,137,63,.35);
+  padding:7px 0;
+}
+.ceremony-detail{
+  display:grid;
+  grid-template-columns:112px 1fr;
+  align-items:center;
+  gap:18px;
+  padding:14px 8px;
+  text-align:left;
+}
+.ceremony-detail + .ceremony-detail{
+  border-top:1px solid rgba(11,35,68,.06);
+}
+.ceremony-detail small{
+  color:#788697;
+  font:500 8px "Montserrat",sans-serif;
+  letter-spacing:.20em;
+}
+.ceremony-detail strong{
+  color:#0b2344;
+  font:500 24px/1.1 "Cormorant Garamond",serif;
+}
+
+.ceremony-location{
+  margin-top:27px;
+  min-height:49px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:12px 24px;
+  border:1px solid #0b2344;
+  border-radius:999px;
+  background:#0b2344;
+  color:#f8f4ec;
+  box-shadow:0 9px 24px rgba(11,35,68,.12);
+  font:500 10px "Montserrat",sans-serif;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.ceremony-location:hover{
+  transform:translateY(-1px);
+  box-shadow:0 12px 28px rgba(11,35,68,.16);
+}
+.ceremony-location:active{transform:scale(.985)}
+.pin-icon{
+  width:16px;
+  height:16px;
+  display:inline-flex;
+}
+.pin-icon svg{
+  width:100%;height:100%;
+  fill:none;stroke:#d7b779;stroke-width:1.4;
+  stroke-linecap:round;stroke-linejoin:round;
+}
+.ceremony-location-note{
+  margin:11px 0 0;
+  color:#8a929b;
+  font:500 8px "Montserrat",sans-serif;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.ceremony-next{
+  margin-top:25px !important;
+  color:#667284 !important;
+}
+
+/* Botánica lateral muy discreta */
+.ceremony-botanical{
+  position:absolute;
+  z-index:0;
+  width:98px;
+  height:390px;
+  top:31%;
+  opacity:.24;
+  pointer-events:none;
+}
+.botanical-left{left:-25px;transform:rotate(-8deg)}
+.botanical-right{right:-25px;transform:scaleX(-1) rotate(-8deg)}
+.ceremony-stem{
+  position:absolute;
+  left:41px;
+  bottom:0;
+  width:1px;
+  height:378px;
+  background:linear-gradient(0deg,#b7893f,rgba(23,54,95,.52) 58%,transparent);
+  transform:rotate(8deg);
+  transform-origin:bottom;
+}
+.ceremony-leaf{
+  position:absolute;
+  width:31px;
+  height:13px;
+  border:1px solid rgba(23,54,95,.58);
+  border-radius:100% 0 100% 0;
+  background:rgba(23,54,95,.02);
+}
+.cl1{left:39px;bottom:48px;transform:rotate(-28deg)}
+.cl2{left:11px;bottom:105px;transform:rotate(150deg) scale(.9)}
+.cl3{left:49px;bottom:166px;transform:rotate(-23deg)}
+.cl4{left:16px;bottom:227px;transform:rotate(153deg) scale(.9)}
+.cl5{left:53px;bottom:288px;transform:rotate(-18deg) scale(.86)}
+.cl6{left:25px;bottom:343px;transform:rotate(157deg) scale(.78)}
+
+@media(max-width:600px){
+  .ceremony-content{
+    width:100%;
+    padding:58px 22px 48px;
+  }
+  .ceremony-editorial h3{
+    font-size:clamp(52px,15vw,72px);
+  }
+  .ceremony-copy{
+    font-size:20px;
+  }
+  .ceremony-details{
+    width:100%;
+  }
+  .ceremony-detail{
+    grid-template-columns:92px 1fr;
+    gap:12px;
+    padding:13px 4px;
+  }
+  .ceremony-detail strong{
+    font-size:21px;
+  }
+  .ceremony-location{
+    min-height:50px;
+    padding-left:22px;
+    padding-right:22px;
+    font-size:9px;
+  }
+  .ceremony-botanical{
+    width:62px;
+    height:315px;
+    opacity:.15;
+  }
+  .botanical-left{left:-31px}
+  .botanical-right{right:-31px}
+  .ceremony-stem{left:27px;height:300px}
+  .ceremony-leaf{width:22px;height:10px}
+  .cl1{left:25px;bottom:40px}.cl2{left:6px;bottom:84px}
+  .cl3{left:31px;bottom:131px}.cl4{left:9px;bottom:179px}
+  .cl5{left:33px;bottom:227px}.cl6{left:14px;bottom:272px}
+}

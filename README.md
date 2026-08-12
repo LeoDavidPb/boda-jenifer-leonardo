@@ -78,3 +78,6 @@ Se agregó una transición emotiva entre la pantalla 'Hay momentos...' y 'Nuestr
 
 
 Corrección de transición emotiva: fondo claro forzado, eliminación de overlay oscuro heredado, texto legible y botón renombrado a 'Sé parte de nosotros'.
+
+
+Ceremonia rediseñada con estilo editorial/botánico. Dirección actualizada a Cra. 32 #71 Sur-182, Sabaneta, Antioquia. Botón 'Cómo llegar' abre Google Maps con la ubicación exacta.
