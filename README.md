@@ -27,3 +27,6 @@ Se rediseñó la sección “Reserva la fecha” con composición Jeni & Leo, az
 
 
 Ajuste: contador azul marino en cuatro tarjetas y ramas laterales con hojas CSS.
+
+
+Ajuste adicional: se eliminaron únicamente los nombres Jeni & Leo de la sección Reserva la fecha. El resto del diseño permanece igual.
