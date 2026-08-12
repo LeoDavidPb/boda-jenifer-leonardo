@@ -1279,3 +1279,192 @@ body{background:var(--navy-950)}
   .winding-copy h4{font-size:22px}
   .winding-copy p:last-child{font-size:12px}
 }
+
+/* =========================================================
+   CORRECCIÓN ITINERARIO — FONDO CLARO + MOBILE FIRST
+   Mantiene camino serpenteante, pero evita cruces y recortes.
+   ========================================================= */
+.light-garden-itinerary{
+  color:#0b2344;
+  background:
+    radial-gradient(circle at 50% 8%,rgba(255,255,255,.96),transparent 34%),
+    linear-gradient(180deg,#f8f5ee 0%,#eef3f5 48%,#f8f5ee 100%) !important;
+}
+.light-garden-itinerary::before{
+  opacity:.11;
+  background:
+    repeating-linear-gradient(8deg,transparent 0 5px,rgba(11,35,68,.022) 6px),
+    repeating-linear-gradient(94deg,transparent 0 8px,rgba(11,35,68,.014) 9px);
+}
+.light-garden-itinerary .eyebrow{color:#8c6a34}
+.light-garden-itinerary .winding-title{color:#0b2344;text-shadow:none}
+.light-garden-itinerary .winding-subtitle{color:#6e7b87}
+.light-garden-itinerary .winding-path-svg path{
+  stroke:#b58a47;
+  stroke-width:1.6;
+  opacity:.82;
+  filter:none;
+}
+.light-garden-itinerary .winding-icon{
+  color:#b58a47;
+  background:#f7f3eb;
+  border-color:rgba(181,138,71,.72);
+  box-shadow:0 0 0 6px rgba(247,243,235,.92),0 8px 20px rgba(11,35,68,.08);
+}
+.light-garden-itinerary .winding-copy .timeline-time{color:#a87d3b}
+.light-garden-itinerary .winding-copy h4{color:#0b2344}
+.light-garden-itinerary .winding-copy p:last-child{color:#71808d}
+.light-garden-itinerary .winding-item::after{
+  background:#b58a47;
+  box-shadow:0 0 0 4px rgba(181,138,71,.10);
+}
+.light-garden-itinerary .itinerary-note{color:#75808a}
+.light-garden-itinerary .text-next{color:#0b2344}
+.light-garden-itinerary .night-bloom{
+  opacity:.08;
+  background:radial-gradient(circle,#9eb2c1,transparent 68%);
+}
+.light-garden-itinerary .winding-leaves{
+  opacity:.18;
+  filter:none;
+}
+
+/* Desktop/tablet: more breathing room and a narrower central path */
+.light-garden-itinerary .winding-timeline{
+  width:min(100%,650px);
+  height:790px;
+}
+.light-garden-itinerary .winding-path-svg{width:92px}
+.light-garden-itinerary .winding-item{width:42%}
+.light-garden-itinerary .winding-item.left::after{right:-21%}
+.light-garden-itinerary .winding-item.right::after{left:-21%}
+
+/* Smartphone: redesigned specifically for a narrow vertical viewport */
+@media(max-width:600px){
+  .light-garden-itinerary{
+    padding-left:0;
+    padding-right:0;
+  }
+  .light-garden-itinerary .winding-content{
+    width:100%;
+    max-width:430px;
+    padding:48px 18px 44px;
+    box-sizing:border-box;
+  }
+  .light-garden-itinerary .winding-title{
+    font-size:clamp(50px,14vw,64px);
+    line-height:.95;
+  }
+  .light-garden-itinerary .winding-subtitle{
+    width:88%;
+    font-size:15px;
+  }
+
+  .light-garden-itinerary .winding-timeline{
+    width:100%;
+    height:920px;
+    margin:34px auto 18px;
+  }
+  /* Central organic path remains narrow so it never covers text */
+  .light-garden-itinerary .winding-path-svg{
+    left:50%;
+    width:54px;
+    height:100%;
+  }
+  .light-garden-itinerary .winding-path-svg path{
+    stroke-width:1.35;
+  }
+
+  .light-garden-itinerary .winding-item{
+    width:43%;
+    gap:0;
+    display:block;
+  }
+  .light-garden-itinerary .winding-item.left{
+    left:0;
+    padding-right:8px;
+    text-align:right;
+  }
+  .light-garden-itinerary .winding-item.right{
+    right:0;
+    padding-left:8px;
+    text-align:left;
+  }
+
+  /* Icons sit toward the path, copy remains safely toward the outside */
+  .light-garden-itinerary .winding-icon{
+    position:absolute;
+    top:0;
+    width:42px;
+    height:42px;
+    z-index:4;
+    box-shadow:0 0 0 5px rgba(247,243,235,.96),0 7px 16px rgba(11,35,68,.07);
+  }
+  .light-garden-itinerary .winding-item.left .winding-icon{right:-17px}
+  .light-garden-itinerary .winding-item.right .winding-icon{left:-17px}
+  .light-garden-itinerary .winding-icon svg{width:23px;height:23px}
+
+  .light-garden-itinerary .winding-copy{
+    max-width:none;
+    width:100%;
+    box-sizing:border-box;
+  }
+  .light-garden-itinerary .winding-item.left .winding-copy{padding-right:32px}
+  .light-garden-itinerary .winding-item.right .winding-copy{padding-left:32px}
+
+  .light-garden-itinerary .winding-copy .timeline-time{
+    font-size:7px;
+    letter-spacing:.11em;
+    margin-bottom:5px;
+    white-space:nowrap;
+  }
+  .light-garden-itinerary .winding-copy h4{
+    font-size:clamp(22px,6.4vw,28px);
+    line-height:.96;
+    overflow-wrap:normal;
+    word-break:normal;
+  }
+  .light-garden-itinerary .winding-copy p:last-child{
+    margin-top:7px;
+    font-size:12.5px;
+    line-height:1.24;
+  }
+
+  /* Generous vertical separation between events */
+  .light-garden-itinerary .item-1{top:1%}
+  .light-garden-itinerary .item-2{top:18%}
+  .light-garden-itinerary .item-3{top:35%}
+  .light-garden-itinerary .item-4{top:52%}
+  .light-garden-itinerary .item-5{top:69%}
+  .light-garden-itinerary .item-6{top:86%}
+
+  /* Remove old dots: the line icons themselves are the markers */
+  .light-garden-itinerary .winding-item::after{display:none}
+
+  /* Much lighter garden decoration on phone */
+  .light-garden-itinerary .winding-leaves{
+    width:68px;
+    height:330px;
+    opacity:.10;
+  }
+  .light-garden-itinerary .wl-left{left:-35px}
+  .light-garden-itinerary .wl-right{right:-35px}
+  .light-garden-itinerary .night-bloom{opacity:.05}
+
+  .light-garden-itinerary .itinerary-note{
+    width:86%;
+    margin:26px auto 8px;
+    font-size:14px;
+    line-height:1.35;
+  }
+}
+
+@media(max-width:380px){
+  .light-garden-itinerary .winding-content{padding-left:14px;padding-right:14px}
+  .light-garden-itinerary .winding-timeline{height:950px}
+  .light-garden-itinerary .winding-item{width:44%}
+  .light-garden-itinerary .winding-item.left .winding-copy{padding-right:29px}
+  .light-garden-itinerary .winding-item.right .winding-copy{padding-left:29px}
+  .light-garden-itinerary .winding-copy h4{font-size:21px}
+  .light-garden-itinerary .winding-copy p:last-child{font-size:11.5px}
+}

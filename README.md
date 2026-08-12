@@ -45,3 +45,6 @@ Rediseño: itinerario convertido en línea de tiempo de jardín minimalista. Ico
 
 
 Rediseño del itinerario: camino serpenteante alternando eventos a izquierda y derecha, con fondo de jardín nocturno azul marino, línea dorada e iconos SVG minimalistas.
+
+
+Corrección móvil del itinerario: fondo claro marfil/azul hielo, camino serpenteante estrecho, eventos alternados sin superposición y decoración botánica más ligera.
