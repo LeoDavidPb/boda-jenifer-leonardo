@@ -2158,3 +2158,79 @@ body{background:var(--navy-950)}
     height:65px !important;
   }
 }
+
+/* =========================================================
+   CONTROL DE MÚSICA — DISCRETO, FIJO Y ADAPTADO A SMARTPHONE
+   ========================================================= */
+.music-toggle{
+  position:fixed;
+  right:max(18px,env(safe-area-inset-right));
+  bottom:max(20px,calc(env(safe-area-inset-bottom) + 14px));
+  z-index:9999;
+  width:46px;
+  height:46px;
+  padding:0;
+  border:1px solid rgba(190,146,74,.58);
+  border-radius:50%;
+  background:rgba(8,35,67,.91);
+  box-shadow:0 8px 22px rgba(5,24,45,.18);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(8px) scale(.96);
+  transition:opacity .35s ease,transform .35s ease,background .25s ease;
+  -webkit-tap-highlight-color:transparent;
+  backdrop-filter:blur(7px);
+  -webkit-backdrop-filter:blur(7px);
+}
+.music-toggle.visible{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0) scale(1);
+}
+.music-toggle:hover{
+  background:rgba(10,43,81,.96);
+}
+.music-toggle:focus-visible{
+  outline:2px solid rgba(190,146,74,.75);
+  outline-offset:3px;
+}
+.music-bars{
+  height:17px;
+  display:flex;
+  align-items:center;
+  gap:3px;
+}
+.music-bars i{
+  display:block;
+  width:2px;
+  border-radius:2px;
+  background:#d7b26a;
+  transform-origin:center bottom;
+}
+.music-bars i:nth-child(1){height:8px;animation:weddingMusicBar 1s ease-in-out infinite}
+.music-bars i:nth-child(2){height:15px;animation:weddingMusicBar .8s ease-in-out .12s infinite}
+.music-bars i:nth-child(3){height:11px;animation:weddingMusicBar .95s ease-in-out .24s infinite}
+.music-toggle.paused .music-bars i{
+  animation-play-state:paused;
+  height:3px;
+}
+@keyframes weddingMusicBar{
+  0%,100%{transform:scaleY(.48)}
+  50%{transform:scaleY(1)}
+}
+@media(max-width:600px){
+  .music-toggle{
+    width:43px;
+    height:43px;
+    right:max(14px,env(safe-area-inset-right));
+    bottom:max(17px,calc(env(safe-area-inset-bottom) + 12px));
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .music-bars i{animation:none}
+  .music-toggle{transition:none}
+}

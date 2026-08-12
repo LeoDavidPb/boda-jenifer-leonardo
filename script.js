@@ -108,3 +108,60 @@ document.getElementById("shareButton").addEventListener("click",async()=>{
     }
   }catch(e){}
 });
+
+/* =========================================================
+   MÚSICA DE LA INVITACIÓN
+   Empieza con el gesto del usuario al tocar el sello.
+   ========================================================= */
+(() => {
+  const music = document.getElementById("weddingMusic");
+  const toggle = document.getElementById("musicToggle");
+  if (!music || !toggle) return;
+
+  music.volume = 0.72;
+
+  const setPlayingUI = (playing) => {
+    toggle.classList.toggle("paused", !playing);
+    toggle.setAttribute("aria-pressed", String(playing));
+    toggle.setAttribute("aria-label", playing ? "Pausar música" : "Reproducir música");
+    toggle.title = playing ? "Pausar música" : "Reproducir música";
+  };
+
+  const showControl = () => toggle.classList.add("visible");
+
+  const startWeddingMusic = async () => {
+    try {
+      await music.play();
+      setPlayingUI(true);
+      showControl();
+    } catch (error) {
+      // Si el navegador no permite iniciar en ese instante,
+      // dejamos visible el control para que el invitado pueda activarla.
+      setPlayingUI(false);
+      showControl();
+    }
+  };
+
+  const seal = document.querySelector(".navy-opening .seal") || document.querySelector(".seal");
+  if (seal) {
+    seal.addEventListener("click", startWeddingMusic, { once: true });
+  }
+
+  toggle.addEventListener("click", async (event) => {
+    event.stopPropagation();
+    if (music.paused) {
+      try {
+        await music.play();
+        setPlayingUI(true);
+      } catch (error) {
+        setPlayingUI(false);
+      }
+    } else {
+      music.pause();
+      setPlayingUI(false);
+    }
+  });
+
+  music.addEventListener("play", () => setPlayingUI(true));
+  music.addEventListener("pause", () => setPlayingUI(false));
+})();

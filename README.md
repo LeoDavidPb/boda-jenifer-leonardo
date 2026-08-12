@@ -63,3 +63,6 @@ Sello de cera V2: silueta más irregular, borde lobulado, menos brillo, relieve 
 
 
 Sello de cera V3: perímetro continuo con ondulaciones más naturales, sin gotas circulares visibles, tamaño reducido y relieve prensado más sutil. Se conserva la paleta original y no se modifica ninguna otra sección.
+
+
+Música: se añadió te-esperaba.mp3. La reproducción se inicia al tocar el sello y aparece un control flotante para pausar/reanudar. El audio está configurado en bucle y volumen inicial moderado.
