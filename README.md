@@ -100,3 +100,6 @@ Ajuste visual: el botón Continuar de la sección Ceremonia ahora se reconoce cl
 - La canción se pausa automáticamente cuando Safari/Chrome pasa a segundo plano, se minimiza o se cambia de pestaña.
 - Si estaba sonando antes de salir, se intenta reanudar al volver a la invitación.
 - Si Safari bloquea la reanudación automática, el botón flotante permanece disponible para retomarla manualmente.
+
+
+Nuevo cierre: broche heráldico vertical con esmalte azul marino, marco dorado, monograma J & L y ramas botánicas lineales. Se conserva la carta, la música, la animación y toda la estructura restante.

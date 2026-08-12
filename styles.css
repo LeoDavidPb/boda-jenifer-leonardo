@@ -3421,3 +3421,164 @@ section#emotional .emotional-next:active{
   }
   .info-intro{font-size:18px}
 }
+
+/* =========================================================
+   SELLO V5 — BROCHE HERÁLDICO / ESMALTE AZUL MARINO
+   Alternativa al lacre y al medallón circular.
+   ========================================================= */
+
+/* Oculta residuos visuales de propuestas anteriores */
+.navy-opening .wax-edge,
+.navy-opening .wax-inner-ring,
+.navy-opening .wax-monogram,
+.navy-opening .medallion-halo,
+.navy-opening .medallion-ring,
+.navy-opening .medallion-leaf,
+.navy-opening .medallion-monogram{
+  display:none !important;
+}
+
+/* Silueta vertical tipo escudo antiguo, no circular */
+.navy-opening .seal{
+  width:72px !important;
+  height:88px !important;
+  border:1px solid rgba(228,196,128,.82) !important;
+  border-radius:38% 38% 48% 48% / 28% 28% 62% 62% !important;
+  background:
+    radial-gradient(circle at 36% 22%,rgba(255,255,255,.10),transparent 17%),
+    linear-gradient(160deg,#15355f 0%,#0c284c 52%,#071a33 100%) !important;
+  color:#eed49b !important;
+  box-shadow:
+    inset 2px 2px 4px rgba(255,255,255,.04),
+    inset -4px -5px 8px rgba(0,0,0,.20),
+    0 10px 24px rgba(0,0,0,.27) !important;
+  transform:translate(-50%,-50%) rotate(-1deg) !important;
+  overflow:visible !important;
+}
+
+/* Marco exterior dorado fino */
+.navy-opening .seal::before{
+  content:"" !important;
+  position:absolute !important;
+  z-index:-2 !important;
+  inset:-6px !important;
+  border-radius:40% 40% 51% 51% / 28% 28% 65% 65% !important;
+  border:1px solid rgba(215,183,121,.48) !important;
+  background:
+    linear-gradient(160deg,#c9a35d,#9f7638) !important;
+  box-shadow:
+    0 0 0 3px rgba(7,26,51,.20),
+    0 5px 10px rgba(0,0,0,.14) !important;
+  transform:none !important;
+}
+
+/* Capa azul interior para crear efecto de placa esmaltada */
+.navy-opening .seal::after{
+  content:"" !important;
+  position:absolute !important;
+  z-index:0 !important;
+  inset:5px !important;
+  border-radius:34% 34% 45% 45% / 25% 25% 61% 61% !important;
+  border:1px solid rgba(238,212,155,.34) !important;
+  background:
+    radial-gradient(circle at 38% 24%,rgba(255,255,255,.045),transparent 28%),
+    linear-gradient(160deg,#143259,#0b2445) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(0,0,0,.12),
+    inset 2px 2px 3px rgba(255,255,255,.025) !important;
+}
+
+/* Marco geométrico interior */
+.navy-opening .crest-frame{
+  position:absolute;
+  z-index:1;
+  inset:13px 11px 15px;
+  border:1px solid rgba(215,183,121,.55);
+  border-radius:32% 32% 48% 48% / 24% 24% 62% 62%;
+  pointer-events:none;
+}
+.navy-opening .crest-inner{
+  position:absolute;
+  z-index:1;
+  left:50%;
+  top:17px;
+  width:30px;
+  height:1px;
+  transform:translateX(-50%);
+  background:linear-gradient(90deg,transparent,#d7b779,transparent);
+}
+
+/* Ramas lineales sutiles que hacen eco del jardín */
+.navy-opening .crest-branch{
+  position:absolute;
+  z-index:2;
+  bottom:16px;
+  width:19px;
+  height:23px;
+  border-left:1px solid rgba(215,183,121,.62);
+  transform-origin:bottom;
+  opacity:.85;
+}
+.navy-opening .crest-branch::before,
+.navy-opening .crest-branch::after{
+  content:"";
+  position:absolute;
+  width:9px;
+  height:4px;
+  border:1px solid rgba(215,183,121,.58);
+  border-radius:100% 0 100% 0;
+  background:transparent;
+}
+.navy-opening .crest-branch::before{left:1px;top:5px;transform:rotate(-24deg)}
+.navy-opening .crest-branch::after{left:4px;top:13px;transform:rotate(-12deg)}
+.navy-opening .crest-branch-left{
+  left:16px;
+  transform:rotate(-22deg);
+}
+.navy-opening .crest-branch-right{
+  right:16px;
+  transform:scaleX(-1) rotate(-22deg);
+}
+
+/* Monograma central */
+.navy-opening .crest-monogram{
+  position:relative;
+  z-index:3;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:2px;
+  margin-top:-2px;
+  color:#f1dbab;
+  font:500 19px/1 "Cormorant Garamond",serif;
+  letter-spacing:.01em;
+  text-shadow:0 1px 0 rgba(255,255,255,.06);
+}
+.navy-opening .crest-monogram i{
+  color:#d7b779 !important;
+  font-style:italic;
+  font-size:.82em;
+}
+
+/* Interacción: pequeña presión, sin apariencia de botón web */
+.navy-opening .seal:hover{
+  transform:translate(-50%,-50%) rotate(-.5deg) scale(1.012) !important;
+  filter:none !important;
+}
+.navy-opening .seal:active{
+  transform:translate(-50%,-50%) rotate(-.5deg) scale(.982) !important;
+}
+.navy-opening .envelope.open .seal{
+  transform:translate(-50%,-50%) rotate(-1deg) scale(1.08) !important;
+  opacity:0 !important;
+}
+
+@media(max-width:600px){
+  .navy-opening .seal{
+    width:68px !important;
+    height:83px !important;
+  }
+  .navy-opening .crest-monogram{
+    font-size:18px;
+  }
+}
