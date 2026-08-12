@@ -106,3 +106,6 @@ Nuevo cierre: broche heráldico vertical con esmalte azul marino, marco dorado, 
 
 
 Reserva la fecha rediseñada: fondo nocturno editorial, fecha 12 · 12 · 2026 como protagonista, frase emocional, contador limpio sin tarjetas pesadas y botánica lateral sutil.
+
+
+Reserva la fecha ajustada a versión híbrida: fondo claro marfil/azul hielo, fecha editorial 12 · 12 · 2026 y recuperación de las tarjetas azul marino/dorado del contador anterior.
