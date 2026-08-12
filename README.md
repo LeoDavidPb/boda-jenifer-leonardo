@@ -103,3 +103,6 @@ Ajuste visual: el botón Continuar de la sección Ceremonia ahora se reconoce cl
 
 
 Nuevo cierre: broche heráldico vertical con esmalte azul marino, marco dorado, monograma J & L y ramas botánicas lineales. Se conserva la carta, la música, la animación y toda la estructura restante.
+
+
+Reserva la fecha rediseñada: fondo nocturno editorial, fecha 12 · 12 · 2026 como protagonista, frase emocional, contador limpio sin tarjetas pesadas y botánica lateral sutil.

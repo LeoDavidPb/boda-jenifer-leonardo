@@ -3582,3 +3582,307 @@ section#emotional .emotional-next:active{
     font-size:18px;
   }
 }
+
+/* =========================================================
+   RESERVA LA FECHA — REDISEÑO EDITORIAL NOCTURNO
+   ========================================================= */
+.date-editorial{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  min-height:100svh;
+  background:
+    radial-gradient(circle at 50% 36%,rgba(43,77,112,.42),transparent 34%),
+    linear-gradient(180deg,#0f2f52 0%,#0a2544 54%,#061a31 100%) !important;
+  color:#f8f4ec;
+}
+.date-editorial .ring,
+.date-editorial .date-watercolor,
+.date-editorial .date-botanical,
+.date-editorial .date-corner-wash,
+.date-editorial .date-leaf-branch{
+  display:none !important;
+}
+.date-night{
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  opacity:.16;
+  background:
+    repeating-linear-gradient(8deg,transparent 0 5px,rgba(255,255,255,.018) 6px),
+    repeating-linear-gradient(95deg,transparent 0 8px,rgba(255,255,255,.011) 9px);
+}
+.date-editorial-content{
+  position:relative;
+  z-index:2;
+  width:min(92%,720px);
+  min-height:100svh;
+  padding:64px 22px 56px;
+  box-sizing:border-box;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.date-kicker{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:13px;
+  margin-bottom:24px;
+}
+.date-kicker p{
+  margin:0;
+  color:#d9c394;
+  font:500 9px "Montserrat",sans-serif;
+  letter-spacing:.24em;
+}
+.date-kicker span{
+  width:40px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#d7b779);
+}
+.date-kicker span:last-child{
+  background:linear-gradient(90deg,#d7b779,transparent);
+}
+
+.date-main{
+  display:flex;
+  align-items:baseline;
+  justify-content:center;
+  gap:10px;
+  color:#fffaf3;
+  margin:0;
+}
+.date-number{
+  font:500 clamp(74px,15vw,118px)/.8 "Cormorant Garamond",serif;
+  letter-spacing:-.03em;
+}
+.date-dot{
+  color:#d7b779;
+  font:400 clamp(44px,8vw,66px)/1 "Cormorant Garamond",serif;
+}
+.date-year{
+  font:500 clamp(42px,9vw,70px)/.9 "Cormorant Garamond",serif;
+  color:#e7d7b4;
+}
+.date-month{
+  margin:22px 0 0;
+  color:#d6dde3;
+  font:500 10px "Montserrat",sans-serif;
+  letter-spacing:.19em;
+}
+.date-emotion{
+  margin:18px 0 0;
+  color:#d7b779;
+  font:400 clamp(27px,5vw,39px)/1.05 "Great Vibes","Cormorant Garamond",serif;
+}
+.date-divider{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin:30px 0 27px;
+  color:#d7b779;
+}
+.date-divider span{
+  width:54px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#d7b779);
+}
+.date-divider span:last-child{
+  background:linear-gradient(90deg,#d7b779,transparent);
+}
+.date-divider b{
+  font:400 12px "Cormorant Garamond",serif;
+}
+
+/* contador limpio, sin tarjetas pesadas */
+.editorial-countdown{
+  width:min(100%,560px);
+  max-width:560px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  margin:0 auto 30px;
+  border-top:1px solid rgba(215,183,121,.30);
+  border-bottom:1px solid rgba(215,183,121,.30);
+}
+.editorial-countdown div{
+  position:relative;
+  padding:19px 8px 17px;
+  background:transparent !important;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  min-height:auto !important;
+}
+.editorial-countdown div + div::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:22%;
+  bottom:22%;
+  width:1px;
+  background:rgba(215,183,121,.22);
+}
+.editorial-countdown b{
+  display:block;
+  margin:0 0 7px;
+  color:#fffaf3 !important;
+  font:500 clamp(34px,6.5vw,48px)/1 "Cormorant Garamond",serif !important;
+  text-shadow:none !important;
+}
+.editorial-countdown span{
+  color:#d6c291 !important;
+  font:500 7px "Montserrat",sans-serif !important;
+  letter-spacing:.15em !important;
+}
+.editorial-countdown div::before,
+.editorial-countdown div::after{
+  pointer-events:none;
+}
+
+.editorial-date-actions{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
+.date-editorial .journey-cta-light{
+  border-color:rgba(215,183,121,.65) !important;
+  background:rgba(255,255,255,.04) !important;
+  color:#f8f4ec !important;
+  box-shadow:none !important;
+}
+.date-editorial .journey-cta-light:hover{
+  background:rgba(255,255,255,.08) !important;
+}
+
+/* botánica lateral muy tenue */
+.date-botanical-edge{
+  position:absolute;
+  z-index:0;
+  width:104px;
+  height:420px;
+  top:32%;
+  opacity:.22;
+  pointer-events:none;
+}
+.date-edge-left{left:-28px;transform:rotate(-8deg)}
+.date-edge-right{right:-28px;transform:scaleX(-1) rotate(-8deg)}
+.date-vine{
+  position:absolute;
+  left:43px;
+  bottom:0;
+  width:1px;
+  height:405px;
+  background:linear-gradient(0deg,#d7b779,rgba(215,183,121,.18) 82%,transparent);
+  transform:rotate(8deg);
+  transform-origin:bottom;
+}
+.date-leaf{
+  position:absolute;
+  width:33px;
+  height:14px;
+  border:1px solid rgba(215,183,121,.65);
+  border-radius:100% 0 100% 0;
+}
+.dl1{left:42px;bottom:52px;transform:rotate(-28deg)}
+.dl2{left:12px;bottom:124px;transform:rotate(150deg) scale(.9)}
+.dl3{left:53px;bottom:198px;transform:rotate(-22deg)}
+.dl4{left:20px;bottom:272px;transform:rotate(154deg) scale(.87)}
+.dl5{left:57px;bottom:346px;transform:rotate(-17deg) scale(.79)}
+
+/* entrada discreta solo una vez al entrar */
+.date-editorial.visible .date-kicker,
+.date-editorial.visible .date-main,
+.date-editorial.visible .date-month,
+.date-editorial.visible .date-emotion,
+.date-editorial.visible .date-divider,
+.date-editorial.visible .editorial-countdown,
+.date-editorial.visible .editorial-date-actions{
+  animation:dateEditorialFade .9s ease both;
+}
+.date-editorial.visible .date-main{animation-delay:.08s}
+.date-editorial.visible .date-month{animation-delay:.16s}
+.date-editorial.visible .date-emotion{animation-delay:.24s}
+.date-editorial.visible .date-divider{animation-delay:.32s}
+.date-editorial.visible .editorial-countdown{animation-delay:.40s}
+.date-editorial.visible .editorial-date-actions{animation-delay:.48s}
+
+@keyframes dateEditorialFade{
+  from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@media(max-width:600px){
+  .date-editorial-content{
+    width:100%;
+    padding:58px 18px 50px;
+  }
+  .date-main{
+    gap:7px;
+  }
+  .date-number{
+    font-size:clamp(62px,19vw,88px);
+  }
+  .date-dot{
+    font-size:clamp(34px,10vw,48px);
+  }
+  .date-year{
+    font-size:clamp(34px,11vw,52px);
+  }
+  .date-month{
+    font-size:8px;
+    letter-spacing:.14em;
+  }
+  .date-emotion{
+    font-size:clamp(25px,7vw,34px);
+  }
+  .editorial-countdown{
+    width:100%;
+    max-width:390px;
+  }
+  .editorial-countdown div{
+    padding:16px 4px 14px;
+  }
+  .editorial-countdown b{
+    font-size:clamp(28px,8vw,38px) !important;
+  }
+  .editorial-countdown span{
+    font-size:6px !important;
+    letter-spacing:.09em !important;
+  }
+  .editorial-date-actions{
+    flex-direction:column;
+    width:100%;
+  }
+  .editorial-date-actions .journey-cta{
+    width:min(88%,320px);
+  }
+  .date-botanical-edge{
+    width:64px;
+    height:320px;
+    opacity:.12;
+  }
+  .date-edge-left{left:-34px}.date-edge-right{right:-34px}
+  .date-vine{left:28px;height:305px}
+  .date-leaf{width:23px;height:10px}
+  .dl1{left:26px;bottom:42px}.dl2{left:7px;bottom:96px}
+  .dl3{left:32px;bottom:151px}.dl4{left:10px;bottom:208px}.dl5{left:34px;bottom:263px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .date-editorial.visible .date-kicker,
+  .date-editorial.visible .date-main,
+  .date-editorial.visible .date-month,
+  .date-editorial.visible .date-emotion,
+  .date-editorial.visible .date-divider,
+  .date-editorial.visible .editorial-countdown,
+  .date-editorial.visible .editorial-date-actions{
+    animation:none !important;
+  }
+}
