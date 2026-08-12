@@ -1795,3 +1795,136 @@ body{background:var(--navy-950)}
     font-size:10.8px;
   }
 }
+
+/* =========================================================
+   SELLO DE CERA ORGÁNICO — MISMA PALETA DEL PROYECTO
+   ========================================================= */
+
+/* El sello deja de ser un círculo perfecto y simula cera derretida prensada */
+.navy-opening .seal{
+  isolation:isolate;
+  width:92px;
+  height:88px;
+  border:0;
+  border-radius:45% 55% 48% 52% / 52% 44% 56% 48%;
+  background:
+    radial-gradient(circle at 31% 24%,rgba(255,255,255,.25),transparent 17%),
+    radial-gradient(circle at 68% 72%,rgba(54,24,14,.13),transparent 32%),
+    linear-gradient(145deg,#c89c52 0%,#b47e35 52%,#8f6129 100%);
+  color:#fff7e4;
+  box-shadow:
+    inset 4px 5px 10px rgba(255,255,255,.16),
+    inset -7px -8px 12px rgba(65,35,15,.20),
+    0 12px 25px rgba(0,0,0,.28);
+  transform:translate(-50%,-50%) rotate(-2deg);
+}
+
+/* Borde exterior imperfecto de cera */
+.navy-opening .seal::before{
+  content:"";
+  position:absolute;
+  z-index:-3;
+  inset:-7px;
+  border:0;
+  border-radius:53% 47% 58% 42% / 46% 58% 42% 54%;
+  background:
+    radial-gradient(circle at 20% 30%,#c99b50 0 11%,transparent 12%),
+    radial-gradient(circle at 81% 25%,#b17b34 0 12%,transparent 13%),
+    radial-gradient(circle at 88% 71%,#97642b 0 13%,transparent 14%),
+    radial-gradient(circle at 25% 83%,#ad7832 0 14%,transparent 15%),
+    linear-gradient(145deg,#c4994e,#966329);
+  filter:drop-shadow(0 4px 4px rgba(0,0,0,.14));
+  transform:rotate(4deg);
+}
+
+/* Pequeña irregularidad interior */
+.navy-opening .seal::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:7px;
+  border-radius:48% 52% 46% 54% / 53% 45% 55% 47%;
+  border:1px solid rgba(255,238,198,.34);
+  box-shadow:
+    inset 0 0 0 2px rgba(80,45,18,.10),
+    0 0 0 1px rgba(80,45,18,.12);
+}
+
+/* Protuberancias irregulares adicionales para romper la silueta perfecta */
+.navy-opening .wax-edge{
+  position:absolute;
+  z-index:-2;
+  display:block;
+  width:24px;
+  height:20px;
+  background:linear-gradient(145deg,#b9853c,#956029);
+  border-radius:55% 45% 58% 42%;
+  pointer-events:none;
+}
+.navy-opening .wax-edge-a{left:-8px;top:18px;transform:rotate(-24deg)}
+.navy-opening .wax-edge-b{right:-8px;top:24px;transform:rotate(31deg) scale(.92)}
+.navy-opening .wax-edge-c{right:8px;bottom:-7px;transform:rotate(18deg) scale(.82)}
+.navy-opening .wax-edge-d{left:9px;bottom:-8px;transform:rotate(-17deg) scale(.88)}
+
+/* Aro prensado, como si se hubiera usado un sello metálico */
+.navy-opening .wax-inner-ring{
+  position:absolute;
+  z-index:1;
+  inset:13px;
+  display:block;
+  border-radius:50%;
+  border:1px solid rgba(74,42,18,.42);
+  box-shadow:
+    inset 1px 1px 2px rgba(255,255,255,.13),
+    inset -2px -2px 3px rgba(61,30,12,.22);
+  pointer-events:none;
+}
+
+/* Monograma hundido */
+.navy-opening .wax-monogram{
+  position:relative;
+  z-index:2;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:2px;
+  color:#f9e9bd;
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.14),
+    0 -1px 1px rgba(72,39,16,.46);
+  transform:translateY(1px);
+}
+.navy-opening .wax-monogram span,
+.navy-opening .wax-monogram i{
+  position:relative;
+  z-index:2;
+}
+
+/* Hover/touch muy sutil: la cera parece recibir presión */
+.navy-opening .seal:hover{
+  transform:translate(-50%,-50%) rotate(-1deg) scale(1.015);
+}
+.navy-opening .seal:active{
+  transform:translate(-50%,-50%) rotate(-1deg) scale(.975);
+}
+
+/* Mantiene intacta la animación de apertura existente */
+.navy-opening .envelope.open .seal{
+  transform:translate(-50%,-50%) rotate(-2deg) scale(1.15);
+  opacity:0;
+}
+
+/* Ajuste móvil sin cambiar proporción de la carta */
+@media(max-width:600px){
+  .navy-opening .seal{
+    width:88px;
+    height:84px;
+  }
+}
+@media(max-height:700px) and (max-width:600px){
+  .navy-opening .seal{
+    width:74px;
+    height:71px;
+  }
+  .navy-opening .wax-inner-ring{inset:11px}
+}

@@ -54,3 +54,6 @@ Versión de validación: itinerario simplificado. Se eliminan todas las decoraci
 
 
 Ajuste: camino serpenteante con curvas más pronunciadas, mayor separación respecto de los bloques de texto y mejor adaptación a smartphone.
+
+
+Ajuste de portada: el sello circular fue reemplazado visualmente por un sello de cera orgánico e irregular, manteniendo los colores dorado/azul marino y toda la animación y funcionalidad existentes.
