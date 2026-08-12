@@ -60,3 +60,6 @@ Ajuste de portada: el sello circular fue reemplazado visualmente por un sello de
 
 
 Sello de cera V2: silueta más irregular, borde lobulado, menos brillo, relieve prensado y monograma grabado; se conserva la paleta original y no se modifica el resto de la carta.
+
+
+Sello de cera V3: perímetro continuo con ondulaciones más naturales, sin gotas circulares visibles, tamaño reducido y relieve prensado más sutil. Se conserva la paleta original y no se modifica ninguna otra sección.

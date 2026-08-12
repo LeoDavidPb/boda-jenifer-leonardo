@@ -2032,3 +2032,129 @@ body{background:var(--navy-950)}
     height:80px !important;
   }
 }
+
+/* =========================================================
+   SELLO DE CERA V3 — MÁS REALISTA, SIN "BOLITAS" VISIBLES
+   Inspirado en sellos de lacre reales: perímetro continuo e
+   irregular, centro prensado, brillo muy contenido.
+   ========================================================= */
+
+/* Base: ligeramente asimétrica y un poco más pequeña */
+.navy-opening .seal{
+  width:78px !important;
+  height:75px !important;
+  border:0 !important;
+  border-radius:47% 53% 45% 55% / 53% 44% 56% 47% !important;
+  background:
+    radial-gradient(ellipse at 31% 22%,rgba(255,236,184,.13) 0 8%,transparent 19%),
+    radial-gradient(ellipse at 66% 73%,rgba(54,28,10,.15) 0 17%,transparent 40%),
+    linear-gradient(142deg,#b5823a 0%,#a06b2d 48%,#845322 100%) !important;
+  color:#f3d89a !important;
+  box-shadow:
+    inset 2px 2px 4px rgba(255,236,186,.10),
+    inset -4px -5px 7px rgba(55,27,10,.23),
+    0 7px 11px rgba(0,0,0,.23) !important;
+  transform:translate(-50%,-50%) rotate(-3deg) !important;
+  overflow:visible !important;
+}
+
+/* Perímetro principal: una sola masa continua con ondulaciones */
+.navy-opening .seal::before{
+  content:"" !important;
+  position:absolute !important;
+  z-index:-2 !important;
+  inset:-6px !important;
+  border-radius:52% 48% 56% 44% / 46% 55% 45% 54% !important;
+  background:
+    radial-gradient(ellipse at 9% 34%,#9c6529 0 8%,transparent 9%),
+    radial-gradient(ellipse at 18% 12%,#a86f2e 0 9%,transparent 10%),
+    radial-gradient(ellipse at 39% 4%,#b07831 0 8%,transparent 9%),
+    radial-gradient(ellipse at 65% 6%,#a8702e 0 9%,transparent 10%),
+    radial-gradient(ellipse at 86% 18%,#9a6227 0 8%,transparent 9%),
+    radial-gradient(ellipse at 97% 43%,#905921 0 8%,transparent 9%),
+    radial-gradient(ellipse at 91% 70%,#89521f 0 9%,transparent 10%),
+    radial-gradient(ellipse at 73% 92%,#8d5621 0 9%,transparent 10%),
+    radial-gradient(ellipse at 48% 98%,#945c24 0 8%,transparent 9%),
+    radial-gradient(ellipse at 24% 91%,#9a6228 0 9%,transparent 10%),
+    radial-gradient(ellipse at 6% 68%,#9e672a 0 8%,transparent 9%),
+    linear-gradient(145deg,#ad7632,#87511f) !important;
+  filter:none !important;
+  box-shadow:
+    inset 1px 1px 2px rgba(255,235,180,.07),
+    0 3px 6px rgba(0,0,0,.15) !important;
+  transform:rotate(5deg) !important;
+}
+
+/* Centro estampado: hundido e imperfecto, como una presión real */
+.navy-opening .seal::after{
+  content:"" !important;
+  position:absolute !important;
+  z-index:0 !important;
+  inset:10px 11px 11px 10px !important;
+  border-radius:49% 51% 47% 53% / 52% 47% 53% 48% !important;
+  border:1px solid rgba(53,27,10,.32) !important;
+  background:
+    radial-gradient(circle at 36% 30%,rgba(255,230,166,.035),transparent 40%),
+    rgba(70,37,13,.025) !important;
+  box-shadow:
+    inset 2px 2px 4px rgba(52,26,9,.20),
+    inset -1px -1px 2px rgba(255,225,158,.07) !important;
+}
+
+/* Ocultar completamente las gotas independientes de versiones previas */
+.navy-opening .wax-edge{
+  display:none !important;
+}
+
+/* Aro interior: más fino, desigual y menos geométrico */
+.navy-opening .wax-inner-ring{
+  inset:15px 16px 16px 15px !important;
+  border:1px solid rgba(56,29,11,.23) !important;
+  border-radius:48% 52% 50% 50% / 52% 47% 53% 48% !important;
+  box-shadow:
+    inset 1px 1px 1px rgba(50,24,8,.16),
+    1px 1px 0 rgba(255,228,164,.05) !important;
+  opacity:.72 !important;
+}
+
+/* Monograma más pequeño y "grabado" */
+.navy-opening .wax-monogram{
+  color:#e0bd76 !important;
+  font-size:.92em !important;
+  letter-spacing:.01em !important;
+  text-shadow:
+    1px 1px 0 rgba(255,229,167,.07),
+    -1px -1px 1px rgba(48,23,8,.42) !important;
+  transform:translateY(1px) rotate(1deg) !important;
+}
+
+/* Sin efecto botón al interactuar */
+.navy-opening .seal:hover{
+  transform:translate(-50%,-50%) rotate(-2deg) scale(1.01) !important;
+  filter:none !important;
+}
+.navy-opening .seal:active{
+  transform:translate(-50%,-50%) rotate(-2deg) scale(.985) !important;
+}
+
+/* Mantener la apertura intacta */
+.navy-opening .envelope.open .seal{
+  transform:translate(-50%,-50%) rotate(-3deg) scale(1.12) !important;
+  opacity:0 !important;
+}
+
+@media(max-width:600px){
+  .navy-opening .seal{
+    width:74px !important;
+    height:71px !important;
+  }
+  .navy-opening .wax-inner-ring{
+    inset:14px 15px 15px 14px !important;
+  }
+}
+@media(max-height:700px) and (max-width:600px){
+  .navy-opening .seal{
+    width:68px !important;
+    height:65px !important;
+  }
+}
