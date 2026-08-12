@@ -1079,3 +1079,203 @@ body{background:var(--navy-950)}
   .e1{left:25px;bottom:38px}.e2{left:6px;bottom:82px}.e3{left:31px;bottom:127px}
   .e4{left:9px;bottom:173px}.e5{left:33px;bottom:219px}.e6{left:13px;bottom:264px}.e7{left:34px;bottom:304px}
 }
+
+/* =========================================================
+   ITINERARIO — CAMINO SERPENTEANTE EN JARDÍN NOCTURNO
+   ========================================================= */
+.winding-itinerary{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  color:#f8f4ec;
+  background:
+    radial-gradient(circle at 50% 8%,rgba(45,80,116,.34),transparent 32%),
+    linear-gradient(180deg,#102f52 0%,#0a2544 48%,#061a31 100%);
+}
+.winding-itinerary::before{
+  content:"";
+  position:absolute;inset:0;z-index:-2;opacity:.17;
+  background:
+    repeating-linear-gradient(8deg,transparent 0 5px,rgba(255,255,255,.018) 6px),
+    repeating-linear-gradient(94deg,transparent 0 8px,rgba(255,255,255,.011) 9px);
+}
+.winding-content{
+  width:min(94%,720px);
+  padding:56px 0 50px;
+}
+.winding-itinerary .eyebrow{color:#d7b779}
+.winding-title{
+  margin:2px 0 8px;
+  font:400 clamp(58px,14vw,90px)/.9 "Great Vibes","Cormorant Garamond",serif;
+  color:#fffaf3;
+}
+.winding-subtitle{
+  max-width:430px;margin:0 auto;
+  color:#cfd8df;
+  font:17px/1.4 "Cormorant Garamond",serif;
+}
+
+/* Camino */
+.winding-timeline{
+  position:relative;
+  width:min(100%,620px);
+  height:760px;
+  margin:38px auto 22px;
+}
+.winding-path-svg{
+  position:absolute;
+  z-index:1;
+  left:50%;
+  top:0;
+  width:112px;
+  height:100%;
+  transform:translateX(-50%);
+  overflow:visible;
+}
+.winding-path-svg path{
+  fill:none;
+  stroke:#c49a5a;
+  stroke-width:2.1;
+  stroke-linecap:round;
+  filter:drop-shadow(0 0 5px rgba(215,183,121,.08));
+  opacity:.92;
+}
+
+/* eventos alternados */
+.winding-item{
+  position:absolute;
+  z-index:3;
+  width:44%;
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.winding-item.left{
+  left:0;
+  flex-direction:row-reverse;
+  text-align:right;
+}
+.winding-item.right{
+  right:0;
+  text-align:left;
+}
+.item-1{top:2%}
+.item-2{top:18%}
+.item-3{top:35%}
+.item-4{top:52%}
+.item-5{top:69%}
+.item-6{top:85%}
+
+.winding-icon{
+  flex:0 0 56px;
+  width:56px;height:56px;
+  display:grid;place-items:center;
+  border:1px solid rgba(215,183,121,.70);
+  border-radius:50%;
+  background:rgba(8,31,57,.88);
+  box-shadow:0 0 0 7px rgba(8,31,57,.72),0 10px 24px rgba(0,0,0,.16);
+  color:#d7b779;
+}
+.winding-icon svg{
+  width:31px;height:31px;
+  fill:none;stroke:currentColor;stroke-width:1.15;
+  stroke-linecap:round;stroke-linejoin:round;
+}
+.winding-copy{max-width:205px}
+.winding-copy .timeline-time{
+  margin:0 0 3px;
+  color:#e0bd76;
+  font-size:9px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.winding-copy h4{
+  margin:0;
+  color:#fffaf3;
+  font:500 29px/1 "Cormorant Garamond",serif;
+}
+.winding-copy p:last-child{
+  margin:7px 0 0;
+  color:#c4cfd8;
+  font:15px/1.28 "Cormorant Garamond",serif;
+}
+
+/* puntos en el sendero frente a cada evento */
+.winding-item::after{
+  content:"";
+  position:absolute;
+  top:27px;
+  width:8px;height:8px;
+  border-radius:50%;
+  background:#d7b779;
+  box-shadow:0 0 0 5px rgba(215,183,121,.10);
+}
+.winding-item.left::after{right:-16%}
+.winding-item.right::after{left:-16%}
+
+/* jardín sutil en laterales */
+.winding-garden{position:absolute;inset:0;pointer-events:none;z-index:0}
+.night-bloom{
+  position:absolute;width:360px;height:360px;border-radius:50%;filter:blur(20px);opacity:.10;
+  background:radial-gradient(circle,#9ab0c0,transparent 68%);
+}
+.nb1{left:-230px;top:18%}.nb2{right:-250px;bottom:8%}
+.winding-leaves{
+  position:absolute;width:150px;height:520px;bottom:-80px;opacity:.28;
+  background:
+    radial-gradient(ellipse at 28px 70px,transparent 0 14px,rgba(215,183,121,.85) 15px 16px,transparent 17px),
+    radial-gradient(ellipse at 68px 130px,transparent 0 16px,rgba(215,183,121,.72) 17px 18px,transparent 19px),
+    radial-gradient(ellipse at 36px 205px,transparent 0 15px,rgba(215,183,121,.68) 16px 17px,transparent 18px),
+    radial-gradient(ellipse at 82px 280px,transparent 0 17px,rgba(215,183,121,.64) 18px 19px,transparent 20px),
+    radial-gradient(ellipse at 48px 360px,transparent 0 15px,rgba(215,183,121,.60) 16px 17px,transparent 18px);
+}
+.wl-left{left:-35px;transform:rotate(-9deg)}
+.wl-right{right:-35px;transform:scaleX(-1) rotate(-9deg)}
+
+.winding-itinerary .itinerary-note{
+  max-width:430px;margin:24px auto 6px;
+  color:#aebbc6;
+  font:italic 15px/1.4 "Cormorant Garamond",serif;
+}
+.winding-itinerary .text-next{color:#ead7ad}
+
+/* Smartphone */
+@media(max-width:600px){
+  .winding-content{width:min(96%,470px);padding-top:48px}
+  .winding-title{font-size:clamp(54px,15vw,70px)}
+  .winding-timeline{
+    width:min(100%,420px);
+    height:820px;
+    margin-top:32px;
+  }
+  .winding-path-svg{
+    width:88px;
+  }
+  .winding-item{
+    width:45%;
+    gap:8px;
+  }
+  .winding-icon{
+    flex-basis:44px;width:44px;height:44px;
+    box-shadow:0 0 0 5px rgba(8,31,57,.72),0 8px 18px rgba(0,0,0,.14);
+  }
+  .winding-icon svg{width:24px;height:24px}
+  .winding-copy{max-width:140px}
+  .winding-copy .timeline-time{font-size:7px;letter-spacing:.12em}
+  .winding-copy h4{font-size:24px}
+  .winding-copy p:last-child{font-size:13px;line-height:1.2}
+  .winding-item::after{top:21px;width:7px;height:7px}
+  .winding-item.left::after{right:-14%}
+  .winding-item.right::after{left:-14%}
+  .item-1{top:1%}.item-2{top:18%}.item-3{top:35%}
+  .item-4{top:52%}.item-5{top:69%}.item-6{top:85%}
+  .winding-leaves{width:95px;height:390px;opacity:.20}
+  .wl-left{left:-40px}.wl-right{right:-40px}
+}
+
+@media(max-width:380px){
+  .winding-timeline{height:850px}
+  .winding-copy{max-width:125px}
+  .winding-copy h4{font-size:22px}
+  .winding-copy p:last-child{font-size:12px}
+}

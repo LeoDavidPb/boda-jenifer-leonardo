@@ -42,3 +42,6 @@ Horarios provisionales del itinerario actualizados: Ceremonia 3:30 p. m.; Recepc
 
 
 Rediseño: itinerario convertido en línea de tiempo de jardín minimalista. Iconos lineales SVG sin emojis. Horarios: 3:30, 5:00, 5:30, 6:30, 7:30 y 9:00 p. m.
+
+
+Rediseño del itinerario: camino serpenteante alternando eventos a izquierda y derecha, con fondo de jardín nocturno azul marino, línea dorada e iconos SVG minimalistas.
