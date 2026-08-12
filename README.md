@@ -1,21 +1,22 @@
-# Invitación Jenifer & Leonardo — V10
+# Invitación Jenifer & Leonardo — V11
 
-Base: V9.
+Base: V10 publicada.
 
-Cambio principal:
-- Rediseño completo de la animación de apertura.
-- No hay estela ni línea de luz.
-- Las mariposas tienen trayectorias más curvas, lentas y orgánicas.
-- Se añadieron pocos pétalos, polen luminoso muy sutil y un bloom cálido suave.
-- La transición dura más y la carta desaparece con mayor suavidad.
-- El efecto busca sentirse natural y ligero, no como una animación pesada.
+Cambios:
+1. Portada/sobre en orientación vertical, diseñada primero para smartphone.
+2. Nueva paleta azul marino con acentos dorados y fondos azul hielo.
 
-Todo lo demás de V9 se conserva:
+Se conserva toda la funcionalidad de V10:
+- animación orgánica de apertura
 - RSVP real
 - calendario
-- navegación rápida
-- ceremonia
-- recepción
+- ceremonia/recepción
+- navegación
 - información
 - cierre
-- botón compartir preparado para publicación
+- compartir
+
+Para actualizar GitHub Pages:
+git add .
+git commit -m "Cambiar portada vertical y paleta azul marino"
+git push
