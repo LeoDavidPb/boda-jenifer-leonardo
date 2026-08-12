@@ -69,3 +69,6 @@ Música: se añadió te-esperaba.mp3. La reproducción se inicia al tocar el sel
 
 
 Corrección de audio: el elemento <audio> ahora carga antes de script.js y la inicialización espera DOMContentLoaded. También se inicia con el gesto directo sobre el sello para mejorar compatibilidad con Safari/iPhone.
+
+
+Cambio de cierre: se reemplazó la imitación de sello de cera por un medallón/broche botánico de latón dorado con monograma J & L. Se mantienen la carta, colores, animación de apertura y música.
