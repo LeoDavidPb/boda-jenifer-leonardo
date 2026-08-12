@@ -57,3 +57,6 @@ Ajuste: camino serpenteante con curvas más pronunciadas, mayor separación resp
 
 
 Ajuste de portada: el sello circular fue reemplazado visualmente por un sello de cera orgánico e irregular, manteniendo los colores dorado/azul marino y toda la animación y funcionalidad existentes.
+
+
+Sello de cera V2: silueta más irregular, borde lobulado, menos brillo, relieve prensado y monograma grabado; se conserva la paleta original y no se modifica el resto de la carta.
