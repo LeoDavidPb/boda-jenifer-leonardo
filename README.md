@@ -20,3 +20,7 @@ Para actualizar GitHub Pages:
 git add .
 git commit -m "Cambiar portada vertical y paleta azul marino"
 git push
+
+
+## Cambio adicional
+Se rediseñó la sección “Reserva la fecha” con composición Jeni & Leo, azul marino, marfil y dorado, manteniendo el contador dinámico y los botones existentes.
