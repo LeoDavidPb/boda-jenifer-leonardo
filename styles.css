@@ -3031,3 +3031,89 @@ section#emotional .emotional-next:active{
   .cl3{left:31px;bottom:131px}.cl4{left:9px;bottom:179px}
   .cl5{left:33px;bottom:227px}.cl6{left:14px;bottom:272px}
 }
+
+/* =========================================================
+   CEREMONIA — BOTÓN CONTINUAR MÁS CLARO COMO CTA
+   ========================================================= */
+.ceremony-editorial .ceremony-next{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:8px !important;
+  min-height:46px !important;
+  margin-top:24px !important;
+  padding:12px 22px !important;
+  border:1px solid rgba(183,137,63,.70) !important;
+  border-radius:999px !important;
+  background:rgba(255,255,255,.46) !important;
+  color:#0b2344 !important;
+  box-shadow:
+    0 7px 18px rgba(11,35,68,.06),
+    inset 0 0 0 1px rgba(255,255,255,.40) !important;
+  font:500 9px "Montserrat",sans-serif !important;
+  letter-spacing:.13em !important;
+  text-transform:uppercase !important;
+  cursor:pointer !important;
+  transition:transform .22s ease,background .22s ease,box-shadow .22s ease !important;
+}
+
+.ceremony-editorial .ceremony-next:hover{
+  background:rgba(255,255,255,.75) !important;
+  transform:translateY(-1px) !important;
+  box-shadow:0 9px 22px rgba(11,35,68,.09) !important;
+}
+
+.ceremony-editorial .ceremony-next:active{
+  transform:scale(.985) !important;
+}
+
+@media(max-width:600px){
+  .ceremony-editorial .ceremony-next{
+    min-height:48px !important;
+    padding:12px 21px !important;
+    font-size:8.5px !important;
+  }
+}
+
+/* =========================================================
+   RSVP — BOTÓN CONTINUAR MÁS CLARO COMO CTA
+   ========================================================= */
+.rsvp .rsvp-next{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:8px !important;
+  min-height:48px !important;
+  margin-top:24px !important;
+  padding:12px 23px !important;
+  border:1px solid rgba(183,137,63,.72) !important;
+  border-radius:999px !important;
+  background:rgba(255,255,255,.48) !important;
+  color:#0b2344 !important;
+  box-shadow:
+    0 7px 18px rgba(11,35,68,.06),
+    inset 0 0 0 1px rgba(255,255,255,.42) !important;
+  font:500 9px "Montserrat",sans-serif !important;
+  letter-spacing:.13em !important;
+  text-transform:uppercase !important;
+  cursor:pointer !important;
+  transition:transform .22s ease,background .22s ease,box-shadow .22s ease !important;
+}
+
+.rsvp .rsvp-next:hover{
+  background:rgba(255,255,255,.78) !important;
+  transform:translateY(-1px) !important;
+  box-shadow:0 9px 22px rgba(11,35,68,.09) !important;
+}
+
+.rsvp .rsvp-next:active{
+  transform:scale(.985) !important;
+}
+
+@media(max-width:600px){
+  .rsvp .rsvp-next{
+    min-height:49px !important;
+    padding:12px 22px !important;
+    font-size:8.5px !important;
+  }
+}
