@@ -94,3 +94,9 @@ Ajuste visual: el botón Continuar de la sección Ceremonia ahora se reconoce cl
 - Información actualizada con datos reales de ceremonia, hora de recepción y notas prácticas.
 - Botones principales/secundarios armonizados en dos familias visuales.
 - Se conserva la limpieza técnica del CSS para una fase final, como se acordó.
+
+
+## Música y visibilidad
+- La canción se pausa automáticamente cuando Safari/Chrome pasa a segundo plano, se minimiza o se cambia de pestaña.
+- Si estaba sonando antes de salir, se intenta reanudar al volver a la invitación.
+- Si Safari bloquea la reanudación automática, el botón flotante permanece disponible para retomarla manualmente.

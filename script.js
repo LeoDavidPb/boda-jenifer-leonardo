@@ -167,3 +167,56 @@ document.addEventListener("DOMContentLoaded", () => {
   music.addEventListener("play", () => setPlayingUI(true));
   music.addEventListener("pause", () => setPlayingUI(false));
 });;
+
+
+/* =========================================================
+   PAUSA AUTOMÁTICA DE MÚSICA CUANDO LA PÁGINA NO ES VISIBLE
+   ========================================================= */
+document.addEventListener("DOMContentLoaded", () => {
+  const music = document.getElementById("weddingMusic");
+  const toggle = document.getElementById("musicToggle");
+  if (!music) return;
+
+  let wasPlayingBeforeHide = false;
+
+  const syncMusicButton = (playing) => {
+    if (!toggle) return;
+    toggle.classList.toggle("paused", !playing);
+    toggle.setAttribute("aria-pressed", String(playing));
+    toggle.setAttribute("aria-label", playing ? "Pausar música" : "Reproducir música");
+    toggle.title = playing ? "Pausar música" : "Reproducir música";
+  };
+
+  const pauseForBackground = () => {
+    if (!music.paused && !music.ended) {
+      wasPlayingBeforeHide = true;
+      music.pause();
+      syncMusicButton(false);
+    } else {
+      wasPlayingBeforeHide = false;
+    }
+  };
+
+  const resumeAfterReturn = async () => {
+    if (!wasPlayingBeforeHide) return;
+    try {
+      await music.play();
+      syncMusicButton(true);
+    } catch (error) {
+      // Si Safari bloquea la reanudación automática, el control queda disponible.
+      syncMusicButton(false);
+    } finally {
+      wasPlayingBeforeHide = false;
+    }
+  };
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      pauseForBackground();
+    } else {
+      resumeAfterReturn();
+    }
+  });
+
+  window.addEventListener("pagehide", pauseForBackground);
+});
