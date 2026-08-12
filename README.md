@@ -72,3 +72,6 @@ Corrección de audio: el elemento <audio> ahora carga antes de script.js y la in
 
 
 Cambio de cierre: se reemplazó la imitación de sello de cera por un medallón/broche botánico de latón dorado con monograma J & L. Se mantienen la carta, colores, animación de apertura y música.
+
+
+Se agregó una transición emotiva entre la pantalla 'Hay momentos...' y 'Nuestra boda': frase principal, acento caligráfico, detalle dorado y botón 'Descubrir nuestra boda'. No se modificó el resto de la invitación.
