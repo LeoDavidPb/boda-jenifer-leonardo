@@ -81,3 +81,6 @@ Corrección de transición emotiva: fondo claro forzado, eliminación de overlay
 
 
 Ceremonia rediseñada con estilo editorial/botánico. Dirección actualizada a Cra. 32 #71 Sur-182, Sabaneta, Antioquia. Botón 'Cómo llegar' abre Google Maps con la ubicación exacta.
+
+
+Ubicación de ceremonia afinada: Parroquia de San Felipe Apóstol, Cra. 32 #71 Sur-182, La Bahia, Sabaneta, La Doctora, Sabaneta, Antioquia. El botón Cómo llegar busca por nombre de la parroquia + dirección completa para mayor precisión.

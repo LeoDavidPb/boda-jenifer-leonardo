@@ -7,7 +7,7 @@ openButton.addEventListener("click",()=>{if(opened)return;opened=true;envelope.c
 document.querySelectorAll(".next").forEach(b=>b.addEventListener("click",()=>{const t=document.getElementById(b.dataset.next);t.classList.add("visible");t.scrollIntoView({behavior:"smooth",block:"start"})}));
 const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&opened)e.target.classList.add("visible")}),{threshold:.27});document.querySelectorAll(".scene:not(#opening)").forEach(s=>observer.observe(s));
 
-document.getElementById("locationButton").addEventListener("click",()=>window.open("https://www.google.com/maps/search/?api=1&query=Cra.%2032%20%2371%20Sur-182%2C%20Sabaneta%2C%20Antioquia","_blank","noopener,noreferrer"));
+document.getElementById("locationButton").addEventListener("click",()=>window.open("https://www.google.com/maps/search/?api=1&query=Parroquia%20de%20San%20Felipe%20Ap%C3%B3stol%2C%20Cra.%2032%20%2371%20Sur-182%2C%20La%20Bahia%2C%20Sabaneta%2C%20La%20Doctora%2C%20Sabaneta%2C%20Antioquia%2C%20Colombia","_blank","noopener,noreferrer"));
 
 const rsvpForm=document.getElementById("rsvpForm");
 const rsvpSuccess=document.getElementById("rsvpSuccess");
