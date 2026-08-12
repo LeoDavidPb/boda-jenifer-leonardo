@@ -109,3 +109,15 @@ Reserva la fecha rediseñada: fondo nocturno editorial, fecha 12 · 12 · 2026 c
 
 
 Reserva la fecha ajustada a versión híbrida: fondo claro marfil/azul hielo, fecha editorial 12 · 12 · 2026 y recuperación de las tarjetas azul marino/dorado del contador anterior.
+
+
+Ajustes: Reserva la fecha recupera la composición clásica con el día 12 como protagonista; se elimina la línea accidental de los bloques del contador; Nuestro recorrido se compacta y corrige específicamente para navegador/desktop.
+
+
+Ajustes tipográficos: se equilibran Diciembre, Sábado y 2026; se aumenta y centra visualmente la numeración del conteo. Ceremonia refinada para mantener coherencia con el lenguaje editorial/botánico actual.
+
+
+Nuevo sello V6: lacre minimalista con silueta orgánica irregular, tono dorado envejecido, doble huella prensada, monograma J & L y una ramita grabada muy sutil. Se conserva la animación de apertura y la reproducción de música.
+
+
+Nuevo sello V7: cierre híbrido con cinta fina dorada y pequeño núcleo tipo lacre, más simple y elegante. También se ajustó el espaciado de 'Nuestra boda' para separar el título de los nombres y mejorar la jerarquía visual.
