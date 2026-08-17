@@ -24,13 +24,13 @@
 
 <section class="scene opening navy-opening" id="opening">
 <div class="texture"></div><div class="botanical bot-a"></div><div class="botanical bot-b"></div>
-<div class="envelope" id="envelope"><div class="card"><small>NUESTRA BODA</small><b>J <i>&</i> L</b><span>12 · 12 · 2026</span></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="bottom"></div><button id="openButton" class="seal">
-<span class="ribbon-seal-ribbon ribbon-left" aria-hidden="true"></span>
-<span class="ribbon-seal-ribbon ribbon-right" aria-hidden="true"></span>
-<span class="ribbon-seal-core" aria-hidden="true"></span>
-<span class="ribbon-seal-monogram"><span>J</span><i>&amp;</i><span>L</span></span>
+<div class="envelope" id="envelope"><div class="card"><small>NUESTRA BODA</small><b>J <i>&</i> L</b><span>12 · 12 · 2026</span></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="bottom"></div><button id="openButton" class="opening-trigger" type="button" aria-label="Abrir nuestra invitación">
+  <span class="opening-trigger-line" aria-hidden="true"></span>
+  <span class="opening-trigger-monogram"><b>J</b><i>&amp;</i><b>L</b></span>
+  <span class="opening-trigger-label">ABRIR</span>
+  <span class="opening-trigger-line" aria-hidden="true"></span>
 </button></div>
-<div class="opening-copy"><p>TOCA EL SELLO</p><small>para abrir nuestra invitación</small></div><div class="opening-veil" id="openingVeil"></div>
+<div class="opening-copy opening-copy-editorial"><p>UNA INVITACIÓN PARA TI</p><small>Toca el monograma para comenzar</small></div><div class="opening-veil" id="openingVeil"></div>
 <div class="nature-stage" id="natureStage" aria-hidden="true">
   <div class="soft-bloom bloom-a"></div>
   <div class="soft-bloom bloom-b"></div>
@@ -282,74 +282,95 @@
 
 <div class="scene-divider" aria-hidden="true"><span>✦</span></div>
 
-<section class="scene itinerary winding-itinerary light-garden-itinerary simple-path-itinerary pronounced-path-itinerary" id="itinerary">
-  <div class="winding-garden" aria-hidden="true">
-    <div class="night-bloom nb1"></div><div class="night-bloom nb2"></div>
-    <div class="winding-leaves wl-left"></div><div class="winding-leaves wl-right"></div>
-  </div>
 
-  <div class="content reveal winding-content">
-    <p class="eyebrow">ITINERARIO</p>
-    <h3 class="winding-title">Nuestro recorrido</h3>
-    <p class="winding-subtitle">Un camino de momentos para vivir juntos.</p>
+<section class="scene itinerary itinerary-steps" id="itinerary">
+  <div class="content reveal itinerary-steps-content">
+    <p class="eyebrow dark">ITINERARIO</p>
+    <h3 class="itinerary-steps-title">Nuestro recorrido</h3>
+    <p class="itinerary-steps-subtitle">Un camino de momentos para vivir juntos.</p>
 
-    <div class="winding-timeline" aria-label="Itinerario de la boda">
-      <svg class="winding-path-svg" viewBox="0 0 120 720" preserveAspectRatio="none" aria-hidden="true">
-        <path d="
-          M60 0
-          C112 42, 112 92, 60 122
-          C8 154, 8 210, 60 244
-          C112 278, 112 332, 60 366
-          C8 400, 8 454, 60 488
-          C112 522, 112 576, 60 610
-          C8 644, 8 690, 60 720
-        " />
-      </svg>
-      
-      <article class="winding-item left item-1">
-        <div class="winding-icon"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M8 29h20M11 29V17c0-5 3-9 7-9s7 4 7 9v12"/><path d="M15 29V18c0-2 1.3-3.5 3-3.5s3 1.5 3 3.5v11"/><path d="M18 8V4M16 6h4"/></svg></div>
-        <div class="winding-copy">
-          <p class="timeline-time">3:30 p. m.</p>
+    <div class="steps-timeline" aria-label="Itinerario de la boda">
+      <div class="steps-axis" aria-hidden="true"></div>
+
+      <article class="step-item step-left">
+        <div class="step-marker">
+          <span class="step-number">01</span>
+          <div class="step-icon">
+            <svg viewBox="0 0 36 36" aria-hidden="true"><path d="M8 29h20M11 29V17c0-5 3-9 7-9s7 4 7 9v12"/><path d="M15 29V18c0-2 1.3-3.5 3-3.5s3 1.5 3 3.5v11"/><path d="M18 8V4M16 6h4"/></svg>
+          </div>
+        </div>
+        <div class="step-copy">
+          <p class="step-time">3:30 p. m.</p>
           <h4>Ceremonia</h4>
           <p>El momento del “sí”.</p>
         </div>
       </article>
-      <article class="winding-item right item-2">
-        <div class="winding-icon"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M7 28V15h22v13"/><path d="M10 15c1.2-5 4.2-8 8-8s6.8 3 8 8"/><path d="M12 20h12M14 24h8"/></svg></div>
-        <div class="winding-copy">
-          <p class="timeline-time">5:00 p. m.</p>
+
+      <article class="step-item step-right">
+        <div class="step-marker">
+          <span class="step-number">02</span>
+          <div class="step-icon">
+            <svg viewBox="0 0 36 36" aria-hidden="true"><path d="M7 28V15h22v13"/><path d="M10 15c1.2-5 4.2-8 8-8s6.8 3 8 8"/><path d="M12 20h12M14 24h8"/></svg>
+          </div>
+        </div>
+        <div class="step-copy">
+          <p class="step-time">5:00 p. m.</p>
           <h4>Recepción</h4>
           <p>Bienvenida y encuentro con nuestros invitados.</p>
         </div>
       </article>
-      <article class="winding-item left item-3">
-        <div class="winding-icon"><svg viewBox="0 0 36 36" aria-hidden="true"><rect x="7" y="11" width="22" height="17" rx="2.5"/><path d="M12 11l2-4h8l2 4"/><circle cx="18" cy="19.5" r="5"/></svg></div>
-        <div class="winding-copy">
-          <p class="timeline-time">5:30 p. m.</p>
+
+      <article class="step-item step-left">
+        <div class="step-marker">
+          <span class="step-number">03</span>
+          <div class="step-icon">
+            <svg viewBox="0 0 36 36" aria-hidden="true"><rect x="7" y="11" width="22" height="17" rx="2.5"/><path d="M12 11l2-4h8l2 4"/><circle cx="18" cy="19.5" r="5"/></svg>
+          </div>
+        </div>
+        <div class="step-copy">
+          <p class="step-time">5:30 p. m.</p>
           <h4>Sesión de fotos</h4>
           <p>Unos minutos para guardar este día para siempre.</p>
         </div>
       </article>
-      <article class="winding-item right item-4">
-        <div class="winding-icon"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M10 29V14c0-5 3.5-9 8-9s8 4 8 9v15"/><path d="M14 29V16c0-2.6 1.8-4.5 4-4.5s4 1.9 4 4.5v13"/><path d="M6 29h24"/></svg></div>
-        <div class="winding-copy">
-          <p class="timeline-time">6:30 p. m.</p>
+
+      <article class="step-item step-right">
+        <div class="step-marker">
+          <span class="step-number">04</span>
+          <div class="step-icon">
+            <svg viewBox="0 0 36 36" aria-hidden="true"><path d="M10 29V14c0-5 3.5-9 8-9s8 4 8 9v15"/><path d="M14 29V16c0-2.6 1.8-4.5 4-4.5s4 1.9 4 4.5v13"/><path d="M6 29h24"/></svg>
+          </div>
+        </div>
+        <div class="step-copy">
+          <p class="step-time">6:30 p. m.</p>
           <h4>Entrada de novios</h4>
           <p>Ahora sí: empieza la celebración.</p>
         </div>
       </article>
-      <article class="winding-item left item-5">
-        <div class="winding-icon"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M10 8v8M7.5 8v5.5c0 1.7 1.1 3 2.5 3s2.5-1.3 2.5-3V8M10 16v13"/><path d="M24 8c-2.5 2.3-3.3 5.9-1.8 9H24v12"/><path d="M15 26h6"/></svg></div>
-        <div class="winding-copy">
-          <p class="timeline-time">7:30 p. m.</p>
+
+      <article class="step-item step-left">
+        <div class="step-marker">
+          <span class="step-number">05</span>
+          <div class="step-icon">
+            <svg viewBox="0 0 36 36" aria-hidden="true"><path d="M10 8v8M7.5 8v5.5c0 1.7 1.1 3 2.5 3s2.5-1.3 2.5-3V8M10 16v13"/><path d="M24 8c-2.5 2.3-3.3 5.9-1.8 9H24v12"/><path d="M15 26h6"/></svg>
+          </div>
+        </div>
+        <div class="step-copy">
+          <p class="step-time">7:30 p. m.</p>
           <h4>Cena</h4>
           <p>Compartimos la mesa y disfrutamos juntos.</p>
         </div>
       </article>
-      <article class="winding-item right item-6">
-        <div class="winding-icon"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M8 8h9l-1 8c-.3 2.7-1.9 4.4-3.5 4.4S9.3 18.7 9 16L8 8Z"/><path d="M19 8h9l-1 8c-.3 2.7-1.9 4.4-3.5 4.4S20.3 18.7 20 16l-1-8Z"/><path d="M12.5 20.5V29M23.5 20.5V29M9 29h7M20 29h7"/></svg></div>
-        <div class="winding-copy">
-          <p class="timeline-time">9:00 p. m.</p>
+
+      <article class="step-item step-right">
+        <div class="step-marker">
+          <span class="step-number">06</span>
+          <div class="step-icon">
+            <svg viewBox="0 0 36 36" aria-hidden="true"><path d="M8 8h9l-1 8c-.3 2.7-1.9 4.4-3.5 4.4S9.3 18.7 9 16L8 8Z"/><path d="M19 8h9l-1 8c-.3 2.7-1.9 4.4-3.5 4.4S20.3 18.7 20 16l-1-8Z"/><path d="M12.5 20.5V29M23.5 20.5V29M9 29h7M20 29h7"/></svg>
+          </div>
+        </div>
+        <div class="step-copy">
+          <p class="step-time">9:00 p. m.</p>
           <h4>Brindis</h4>
           <p>Levantamos las copas por lo que comienza.</p>
         </div>

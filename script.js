@@ -2,7 +2,7 @@ const body=document.body,opening=document.getElementById("opening"),envelope=doc
 
 function showToast(m){toast.textContent=m;toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),2300)}
 
-openButton.addEventListener("click",()=>{if(opened)return;opened=true;envelope.classList.add("open");opening.classList.add("opening-active");opening.classList.add("opening-transition");setTimeout(()=>natureStage.classList.add("active"),850);setTimeout(()=>envelope.classList.add("fade"),2600);setTimeout(()=>{body.classList.remove("locked");story.classList.add("visible");story.scrollIntoView({behavior:"smooth",block:"start"})},6100)});
+openButton.addEventListener("click",()=>{if(opened)return;opened=true;envelope.classList.add("open");opening.classList.add("opening-active");opening.classList.add("opening-transition");setTimeout(()=>natureStage.classList.add("active"),700);setTimeout(()=>envelope.classList.add("fade"),2350);setTimeout(()=>{body.classList.remove("locked");story.classList.add("visible");story.scrollIntoView({behavior:"smooth",block:"start"})},5000)});
 
 document.querySelectorAll(".next").forEach(b=>b.addEventListener("click",()=>{const t=document.getElementById(b.dataset.next);t.classList.add("visible");t.scrollIntoView({behavior:"smooth",block:"start"})}));
 const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&opened)e.target.classList.add("visible")}),{threshold:.27});document.querySelectorAll(".scene:not(#opening)").forEach(s=>observer.observe(s));
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const seal = document.querySelector(".navy-opening .seal") || document.querySelector(".seal");
+  const seal = document.getElementById("openButton");
   if (seal) {
     const startOnGesture = () => startWeddingMusic();
     seal.addEventListener("pointerdown", startOnGesture, { once: true });
