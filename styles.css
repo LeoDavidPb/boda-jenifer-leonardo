@@ -6345,3 +6345,173 @@ input:focus-visible{
     transition-duration:.01ms !important;
   }
 }
+
+
+/* =========================================================
+   v10.18 — Jardín minimalista en "Nuestra boda"
+   Decoración CSS, sin imágenes externas.
+   ========================================================= */
+.couple-refined{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+
+.couple-refined .content{
+  position:relative;
+  z-index:3;
+}
+
+.couple-garden{
+  position:absolute;
+  z-index:1;
+  width:150px;
+  height:250px;
+  pointer-events:none;
+  opacity:.42;
+}
+
+.couple-garden-left{
+  left:-34px;
+  bottom:4%;
+  transform:rotate(-7deg);
+}
+
+.couple-garden-right{
+  right:-32px;
+  top:9%;
+  transform:scaleX(-1) rotate(-5deg);
+}
+
+.couple-garden .garden-stem{
+  position:absolute;
+  left:72px;
+  bottom:4px;
+  width:1.5px;
+  height:225px;
+  background:linear-gradient(
+    to top,
+    rgba(14,47,83,.08),
+    rgba(14,47,83,.46) 24%,
+    rgba(184,137,63,.62) 72%,
+    rgba(184,137,63,.10)
+  );
+  transform:rotate(11deg);
+  transform-origin:bottom center;
+}
+
+.couple-garden .garden-leaf{
+  position:absolute;
+  width:31px;
+  height:13px;
+  border:1px solid rgba(14,47,83,.38);
+  border-radius:100% 0 100% 0;
+  background:linear-gradient(135deg,rgba(21,57,95,.08),rgba(21,57,95,.02));
+}
+
+.couple-garden .l1{
+  left:47px;
+  bottom:62px;
+  transform:rotate(-28deg);
+}
+.couple-garden .l2{
+  left:78px;
+  bottom:113px;
+  transform:rotate(31deg) scale(.88);
+}
+.couple-garden .l3{
+  left:45px;
+  bottom:164px;
+  transform:rotate(-34deg) scale(.73);
+}
+
+.couple-garden .garden-bud{
+  position:absolute;
+  width:8px;
+  height:11px;
+  border:1px solid rgba(184,137,63,.58);
+  border-radius:70% 70% 55% 55%;
+  background:rgba(255,255,255,.24);
+}
+
+.couple-garden .b1{
+  left:86px;
+  bottom:194px;
+  transform:rotate(24deg);
+}
+.couple-garden .b2{
+  left:58px;
+  bottom:213px;
+  width:6px;
+  height:8px;
+  opacity:.72;
+  transform:rotate(-18deg);
+}
+
+.couple-spark{
+  position:absolute;
+  z-index:1;
+  color:#b7893f;
+  pointer-events:none;
+  opacity:.40;
+  font-family:Georgia,serif;
+}
+
+.couple-spark-a{
+  right:16%;
+  top:25%;
+  font-size:11px;
+}
+
+.couple-spark-b{
+  left:18%;
+  top:31%;
+  font-size:17px;
+  opacity:.27;
+}
+
+/* En móvil: detalles más discretos para no competir con los nombres. */
+@media(max-width:600px){
+  .couple-garden{
+    width:108px;
+    height:196px;
+    opacity:.34;
+  }
+
+  .couple-garden-left{
+    left:-41px;
+    bottom:1%;
+  }
+
+  .couple-garden-right{
+    right:-39px;
+    top:6%;
+  }
+
+  .couple-garden .garden-stem{
+    left:57px;
+    height:176px;
+  }
+
+  .couple-garden .garden-leaf{
+    width:25px;
+    height:10px;
+  }
+
+  .couple-garden .l1{left:37px;bottom:48px}
+  .couple-garden .l2{left:61px;bottom:87px}
+  .couple-garden .l3{left:37px;bottom:128px}
+
+  .couple-garden .b1{left:67px;bottom:151px}
+  .couple-garden .b2{left:47px;bottom:168px}
+
+  .couple-spark-a{
+    right:10%;
+    top:20%;
+  }
+
+  .couple-spark-b{
+    left:11%;
+    top:28%;
+  }
+}
