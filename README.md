@@ -129,4 +129,4 @@ Corrección móvil: Reserva la fecha se limita a 100%/390px, el conteo y botones
 Itinerario rediseñado por completo: se reemplazó la línea serpenteante por una línea de hitos editoriales central en escritorio y lateral en móvil, con seis momentos compactos y mejor aprovechamiento vertical.
 
 
-Apertura V11: se eliminó el sello/broche visible y se reemplazó por un monograma editorial J & L integrado al pliegue del sobre, acompañado por líneas doradas y la palabra ABRIR. La animación se hizo más breve y ligera, conservando las mariposas y el inicio de música con el gesto del usuario.
+Portada responsive: apertura ajustada a 100dvh para ocupar el viewport visible real de Safari/iPhone, sobre más protagonista y texto inferior más cercano, sin modificar el concepto visual ni la animación.
