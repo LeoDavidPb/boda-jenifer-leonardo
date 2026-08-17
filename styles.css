@@ -5895,3 +5895,119 @@ body.locked{
     height:182px;
   }
 }
+
+/* Referencias de vestimenta v10.5 — ajuste visual únicamente */
+.look-illustration-fashion svg{
+  width:150px;
+  height:230px;
+  overflow:visible;
+  filter:drop-shadow(0 7px 8px rgba(11,35,68,.06));
+}
+.look-illustration-fashion .ref-skin{fill:#d8a17e;stroke:#8d6755;stroke-width:.75}
+.look-illustration-fashion .ref-skin-line{fill:none;stroke:#b27b5f;stroke-width:2.2;stroke-linecap:round}
+.look-illustration-fashion .ref-hair{fill:#473129}
+.look-illustration-fashion .ref-dress{fill:#16365e;stroke:#0b2344;stroke-width:1}
+.look-illustration-fashion .ref-dress-detail{fill:none;stroke:#c79a4d;stroke-width:1;stroke-linecap:round}
+.look-illustration-fashion .ref-shirt{fill:#f6f2e9;stroke:#c9c4ba;stroke-width:.7}
+.look-illustration-fashion .ref-suit,.look-illustration-fashion .ref-trouser{fill:#101722;stroke:#080d14;stroke-width:1}
+.look-illustration-fashion .ref-lapel{fill:#1a2637;stroke:#34445a;stroke-width:.7}
+.look-illustration-fashion .ref-tie,.look-illustration-fashion .ref-shoe{fill:#080c12}
+@media(max-width:600px){
+  .look-illustration-fashion svg{width:126px;height:195px}
+}
+
+/* v10.6 — refinamiento exclusivo de la ilustración de caballero */
+.dress-look-man .look-illustration-fashion{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.dress-look-man .gentleman-portrait{
+  width:142px;
+  height:228px;
+  overflow:visible;
+  filter:drop-shadow(0 9px 10px rgba(11,35,68,.08));
+}
+@media(max-width:600px){
+  .dress-look-man .gentleman-portrait{
+    width:122px;
+    height:198px;
+  }
+}
+
+/* v10.7 — referencias editoriales de vestimenta */
+.look-illustration-editorial{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:250px;
+}
+.look-illustration-editorial .fashion-figure{
+  width:158px;
+  height:238px;
+  overflow:visible;
+  filter:drop-shadow(0 10px 12px rgba(11,35,68,.08));
+}
+.dress-look-woman .fashion-figure{width:166px}
+@media(max-width:600px){
+  .look-illustration-editorial{min-height:215px}
+  .look-illustration-editorial .fashion-figure{width:132px;height:205px}
+  .dress-look-woman .fashion-figure{width:139px}
+}
+
+/* v10.8 — ilustraciones editoriales inspiradas en la referencia aprobada */
+.look-illustration-editorial-v2{
+  min-height:265px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.look-illustration-editorial-v2 .fashion-reference{
+  width:172px;
+  height:250px;
+  overflow:visible;
+  filter:drop-shadow(0 12px 13px rgba(11,35,68,.10));
+}
+.look-illustration-editorial-v2 .fashion-reference-woman{
+  width:180px;
+}
+@media(max-width:600px){
+  .look-illustration-editorial-v2{min-height:220px}
+  .look-illustration-editorial-v2 .fashion-reference{
+    width:137px;
+    height:205px;
+  }
+  .look-illustration-editorial-v2 .fashion-reference-woman{
+    width:145px;
+  }
+}
+
+/* v10.9 — referencias de vestimenta tomadas de las imágenes aportadas */
+.dresscode-photo{
+  display:block;
+  width:auto;
+  max-width:88%;
+  height:235px;
+  object-fit:contain;
+  object-position:center bottom;
+  margin:auto;
+  filter:drop-shadow(0 9px 10px rgba(11,35,68,.08));
+}
+.dresscode-photo-woman{
+  height:240px;
+}
+.dresscode-photo-man{
+  height:238px;
+}
+@media(max-width:600px){
+  .dresscode-photo{
+    max-width:94%;
+    height:195px;
+  }
+  .dresscode-photo-woman{
+    height:198px;
+  }
+  .dresscode-photo-man{
+    height:197px;
+  }
+}
