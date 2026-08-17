@@ -6011,3 +6011,84 @@ body.locked{
     height:197px;
   }
 }
+
+
+/* v10.10 — centrar CTA "Confirmar asistencia" en RSVP */
+.rsvp-section .btn,
+.rsvp-section .button,
+.rsvp-section .cta-button,
+.rsvp-section a[href*="forms"],
+.rsvp-section a[href*="docs.google.com"]{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+/* v10.11 — corrección específica del botón real del formulario RSVP */
+.form-card #rsvpButton{
+  display:block !important;
+  width:max-content !important;
+  max-width:100%;
+  margin:24px auto 4px !important;
+  align-self:center !important;
+}
+
+.form-card{
+  text-align:left;
+}
+
+@media (max-width:600px){
+  .form-card #rsvpButton{
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+}
+
+
+/* v10.12 — sello fotográfico dorado extraído de la referencia aportada */
+.navy-opening .seal.seal-photo{
+  width:92px !important;
+  height:92px !important;
+  padding:0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  overflow:visible !important;
+  display:grid !important;
+  place-items:center !important;
+}
+.navy-opening .seal.seal-photo::before,
+.navy-opening .seal.seal-photo::after{
+  content:none !important;
+  display:none !important;
+}
+.navy-opening .seal-photo-image{
+  display:block;
+  width:112px;
+  height:112px;
+  max-width:none;
+  object-fit:contain;
+  pointer-events:none;
+  user-select:none;
+  -webkit-user-drag:none;
+  filter:drop-shadow(0 7px 8px rgba(3,18,39,.30));
+  transition:transform .35s ease, filter .35s ease;
+}
+.navy-opening .seal.seal-photo:hover .seal-photo-image{
+  transform:scale(1.035);
+  filter:drop-shadow(0 9px 10px rgba(3,18,39,.34));
+}
+.navy-opening .seal.seal-photo:active .seal-photo-image{
+  transform:scale(.98);
+}
+@media(max-width:600px){
+  .navy-opening .seal.seal-photo{
+    width:82px !important;
+    height:82px !important;
+  }
+  .navy-opening .seal-photo-image{
+    width:100px;
+    height:100px;
+  }
+}
