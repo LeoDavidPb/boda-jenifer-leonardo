@@ -130,3 +130,9 @@ Itinerario rediseñado por completo: se reemplazó la línea serpenteante por un
 
 
 Portada responsive: apertura ajustada a 100dvh para ocupar el viewport visible real de Safari/iPhone, sobre más protagonista y texto inferior más cercano, sin modificar el concepto visual ni la animación.
+
+
+Se agregó una sección independiente de Código de vestimenta entre Itinerario y RSVP. Se indica de forma elegante que el color blanco está reservado exclusivamente para la novia.
+
+
+Código de vestimenta ampliado: se añadieron referencias visuales vectoriales para dama y caballero, con estilo formal/elegante y aclaración de que son orientativas, no looks obligatorios.

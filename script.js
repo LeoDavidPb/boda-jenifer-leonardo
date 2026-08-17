@@ -2,7 +2,7 @@ const body=document.body,opening=document.getElementById("opening"),envelope=doc
 
 function showToast(m){toast.textContent=m;toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),2300)}
 
-openButton.addEventListener("click",()=>{if(opened)return;opened=true;envelope.classList.add("open");opening.classList.add("opening-active");opening.classList.add("opening-transition");setTimeout(()=>natureStage.classList.add("active"),850);setTimeout(()=>envelope.classList.add("fade"),2600);setTimeout(()=>{body.classList.remove("locked");story.classList.add("visible");story.scrollIntoView({behavior:"smooth",block:"start"})},6100)});
+openButton.addEventListener("click",()=>{if(opened)return;opened=true;envelope.classList.add("open");opening.classList.add("opening-active");opening.classList.add("opening-transition");setTimeout(()=>natureStage.classList.add("active"),650);setTimeout(()=>envelope.classList.add("fade"),1850);setTimeout(()=>{body.classList.remove("locked");story.classList.add("visible");story.scrollIntoView({behavior:"smooth",block:"start"})},3900)});
 
 document.querySelectorAll(".next").forEach(b=>b.addEventListener("click",()=>{const t=document.getElementById(b.dataset.next);t.classList.add("visible");t.scrollIntoView({behavior:"smooth",block:"start"})}));
 const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&opened)e.target.classList.add("visible")}),{threshold:.27});document.querySelectorAll(".scene:not(#opening)").forEach(s=>observer.observe(s));
@@ -28,7 +28,7 @@ document.getElementById("hidden_iframe").addEventListener("load",()=>{
 
 document.getElementById("restartButton").addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
 
-function countdown(){const target=new Date("2026-12-12T18:00:00-05:00");let x=target-new Date();if(x<=0){document.querySelector(".countdown").innerHTML='<div style="grid-column:1/-1"><b>HOY</b><span>COMIENZA NUESTRA HISTORIA</span></div>';return}const d=Math.floor(x/86400000);x%=86400000;const h=Math.floor(x/3600000);x%=3600000;const m=Math.floor(x/60000),s=Math.floor((x%60000)/1000);document.getElementById("days").textContent=String(d).padStart(3,"0");document.getElementById("hours").textContent=String(h).padStart(2,"0");document.getElementById("minutes").textContent=String(m).padStart(2,"0");document.getElementById("seconds").textContent=String(s).padStart(2,"0")}countdown();setInterval(countdown,1000);
+function countdown(){const target=new Date("2026-12-12T19:00:00-05:00");let x=target-new Date();if(x<=0){document.querySelector(".countdown").innerHTML='<div style="grid-column:1/-1"><b>HOY</b><span>COMIENZA NUESTRA HISTORIA</span></div>';return}const d=Math.floor(x/86400000);x%=86400000;const h=Math.floor(x/3600000);x%=3600000;const m=Math.floor(x/60000),s=Math.floor((x%60000)/1000);document.getElementById("days").textContent=String(d).padStart(3,"0");document.getElementById("hours").textContent=String(h).padStart(2,"0");document.getElementById("minutes").textContent=String(m).padStart(2,"0");document.getElementById("seconds").textContent=String(s).padStart(2,"0")}countdown();setInterval(countdown,1000);
 // V8: progress bar
 const progress=document.getElementById("progress");
 function updateProgress(){
@@ -58,10 +58,10 @@ CALSCALE:GREGORIAN
 BEGIN:VEVENT
 UID:boda-jenifer-leonardo-20261212@example.local
 DTSTAMP:20260809T000000Z
-DTSTART:20261212T230000Z
+DTSTART:20261213T000000Z
 SUMMARY:Boda de Jenifer & Leonardo
-LOCATION:Medellín, Colombia
-DESCRIPTION:Celebración de la boda de Jenifer & Leonardo. La ubicación definitiva se actualizará más adelante.
+LOCATION:Parroquia de San Felipe Apóstol\, Cra. 32 #71 Sur-182\, La Doctora\, Sabaneta\, Antioquia
+DESCRIPTION:Ceremonia de la boda de Jenifer & Leonardo a las 7:00 p. m. en la Parroquia de San Felipe Apóstol. La ubicación de la recepción se compartirá cuando esté confirmada.
 END:VEVENT
 END:VCALENDAR`;
   const blob=new Blob([ics],{type:"text/calendar;charset=utf-8"});

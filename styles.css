@@ -5514,3 +5514,384 @@ body.locked{
   .monogram-open-names{font-size:25px !important}
   .monogram-open-label{font-size:6.8px !important}
 }
+
+/* =========================================================
+   REFINAMIENTOS PREVIOS — 17 AGO 2026
+   Ajustes visuales puntuales sin limpieza estructural del CSS.
+   ========================================================= */
+
+/* Divisores secundarios: transición más editorial y menos repetitiva. */
+.scene-divider-soft {
+  min-height: 24px !important;
+  height: 24px !important;
+  opacity: .42;
+}
+.scene-divider-soft span { transform: scale(.72); }
+
+/* Itinerario: hora + evento son protagonistas; descripción acompaña. */
+.itinerary-steps .step-copy > p:not(.step-time) {
+  font-size: clamp(.88rem, 1.2vw, 1.02rem) !important;
+  line-height: 1.45 !important;
+  opacity: .78;
+  max-width: 25ch;
+}
+.itinerary-steps .step-time {
+  letter-spacing: .18em !important;
+  font-weight: 600;
+}
+.itinerary-steps .step-copy h4 { margin-top: .2rem !important; }
+
+/* RSVP: aspecto de papelería, menos formulario convencional. */
+.rsvp .form-card {
+  background: rgba(255,255,255,.48) !important;
+  border: 1px solid rgba(190,142,55,.30) !important;
+  box-shadow: 0 18px 48px rgba(8,37,70,.07) !important;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+}
+.rsvp .form-card input[type="text"] {
+  background: transparent !important;
+  border-width: 0 0 1px !important;
+  border-radius: 0 !important;
+  border-color: rgba(9,43,82,.28) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-shadow: none !important;
+}
+.rsvp .choice {
+  background: rgba(255,255,255,.28) !important;
+  border-color: rgba(190,142,55,.24) !important;
+}
+
+/* Navegación flotante: presente pero no compite con las acciones principales. */
+.mini-nav.show { opacity: .72 !important; transition: opacity .25s ease, transform .25s ease !important; }
+.mini-nav.show:hover,
+.mini-nav.show:focus-within { opacity: 1 !important; }
+
+/* Jerarquía consistente: CTA principal sólido; secundario en contorno. */
+.journey-cta-primary,
+.journey-cta-dark {
+  box-shadow: 0 10px 26px rgba(7,36,69,.10);
+}
+.ceremony-secondary-action {
+  box-shadow: none !important;
+}
+
+@media (max-width: 640px) {
+  .scene-divider-soft { min-height: 16px !important; height: 16px !important; }
+  .itinerary-steps .step-copy > p:not(.step-time) {
+    font-size: .86rem !important;
+    line-height: 1.38 !important;
+    max-width: 21ch;
+  }
+  .mini-nav.show { opacity: .64 !important; }
+  .mini-nav.show:active { opacity: 1 !important; }
+}
+
+/* =========================================================
+   CÓDIGO DE VESTIMENTA
+   ========================================================= */
+.dresscode-scene{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  background:
+    radial-gradient(circle at 50% 12%,rgba(255,255,255,.97),transparent 34%),
+    linear-gradient(180deg,#f8f5ee 0%,#eef3f5 52%,#f7f3eb 100%) !important;
+  color:#0b2344;
+}
+.dresscode-paper{
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  opacity:.10;
+  background:
+    repeating-linear-gradient(8deg,transparent 0 5px,rgba(11,35,68,.018) 6px),
+    repeating-linear-gradient(95deg,transparent 0 8px,rgba(11,35,68,.010) 9px);
+}
+.dresscode-content{
+  position:relative;
+  z-index:2;
+  width:min(90%,650px);
+  min-height:100svh;
+  margin:0 auto;
+  padding:66px 22px 56px;
+  box-sizing:border-box;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.dresscode-kicker{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:13px;
+  margin-bottom:18px;
+}
+.dresscode-kicker p{
+  margin:0;
+  color:#758394;
+  font:500 9px "Montserrat",sans-serif;
+  letter-spacing:.24em;
+}
+.dresscode-kicker span{
+  width:38px;height:1px;
+  background:linear-gradient(90deg,transparent,#c6a15f);
+}
+.dresscode-kicker span:last-child{
+  background:linear-gradient(90deg,#c6a15f,transparent);
+}
+.dresscode-icon{
+  width:52px;
+  height:52px;
+  margin:2px 0 14px;
+  color:#b7893f;
+}
+.dresscode-icon svg{
+  width:100%;height:100%;
+  fill:none;stroke:currentColor;
+  stroke-width:1.25;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.dresscode-content h3{
+  margin:0;
+  color:#0b2344;
+  font:500 clamp(54px,10vw,78px)/.92 "Cormorant Garamond",serif;
+}
+.dresscode-intro{
+  max-width:470px;
+  margin:19px auto 0;
+  color:#6e7a87;
+  font:400 19px/1.42 "Cormorant Garamond",serif;
+}
+.dresscode-rule{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin:29px 0 25px;
+  color:#b7893f;
+}
+.dresscode-rule span{
+  width:52px;height:1px;
+  background:linear-gradient(90deg,transparent,#c6a15f);
+}
+.dresscode-rule span:last-child{
+  background:linear-gradient(90deg,#c6a15f,transparent);
+}
+.dresscode-rule b{
+  font:400 12px "Cormorant Garamond",serif;
+}
+.dresscode-white-note{
+  width:min(100%,520px);
+  padding:25px 26px 23px;
+  box-sizing:border-box;
+  border-top:1px solid rgba(183,137,63,.34);
+  border-bottom:1px solid rgba(183,137,63,.34);
+  background:rgba(255,255,255,.28);
+}
+.dresscode-script{
+  margin:0;
+  color:#b7893f;
+  font:400 clamp(29px,5vw,40px)/1.05 "Great Vibes","Cormorant Garamond",serif;
+}
+.dresscode-main-note{
+  margin:18px auto 0;
+  max-width:450px;
+  color:#0b2344;
+  font:400 20px/1.38 "Cormorant Garamond",serif;
+}
+.dresscode-main-note strong{
+  font-weight:600;
+}
+.dresscode-small{
+  margin:12px auto 0;
+  max-width:440px;
+  color:#78838e;
+  font:italic 14px/1.38 "Cormorant Garamond",serif;
+}
+.dresscode-next{
+  margin-top:28px !important;
+}
+
+@media(max-width:600px){
+  .dresscode-content{
+    width:100%;
+    padding:58px 20px 48px;
+  }
+  .dresscode-content h3{
+    font-size:clamp(50px,14vw,66px);
+  }
+  .dresscode-intro{
+    font-size:18px;
+  }
+  .dresscode-white-note{
+    padding:22px 18px 20px;
+  }
+  .dresscode-main-note{
+    font-size:19px;
+  }
+  .dresscode-small{
+    font-size:13px;
+  }
+}
+
+/* =========================================================
+   CÓDIGO DE VESTIMENTA — REFERENCIAS VISUALES
+   Ilustraciones vectoriales editoriales, no fotografías.
+   ========================================================= */
+.dresscode-reference{
+  width:min(100%,620px);
+  margin:34px auto 0;
+  padding-top:30px;
+  border-top:1px solid rgba(183,137,63,.24);
+}
+.dresscode-reference-label{
+  margin:0;
+  color:#8793a0;
+  font:500 8px "Montserrat",sans-serif;
+  letter-spacing:.22em;
+}
+.dresscode-reference h4{
+  margin:9px 0 0;
+  color:#0b2344;
+  font:500 clamp(28px,4.5vw,38px)/1 "Cormorant Garamond",serif;
+}
+.dresscode-reference-intro{
+  max-width:450px;
+  margin:10px auto 0;
+  color:#79838e;
+  font:400 15px/1.4 "Cormorant Garamond",serif;
+}
+.dresscode-looks{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  margin-top:25px;
+}
+.dress-look{
+  position:relative;
+  overflow:hidden;
+  padding:18px 16px 19px;
+  border:1px solid rgba(183,137,63,.25);
+  border-radius:22px;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,.20));
+  box-shadow:0 9px 24px rgba(11,35,68,.045);
+}
+.dress-look::before{
+  content:"";
+  position:absolute;
+  left:18px;
+  right:18px;
+  top:16px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(183,137,63,.34),transparent);
+}
+.look-illustration{
+  width:100%;
+  height:230px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#0b2344;
+}
+.look-illustration svg{
+  width:150px;
+  height:220px;
+  overflow:visible;
+}
+.look-line{
+  fill:none;
+  stroke:#0b2344;
+  stroke-width:1.2;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.look-main{
+  fill:rgba(11,35,68,.07);
+  stroke:#0b2344;
+  stroke-width:1.2;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.look-detail{
+  fill:none;
+  stroke:#b7893f;
+  stroke-width:1.15;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.look-copy{
+  padding-top:10px;
+  border-top:1px solid rgba(11,35,68,.07);
+}
+.look-copy span{
+  display:block;
+  color:#b7893f;
+  font:500 8px "Montserrat",sans-serif;
+  letter-spacing:.19em;
+}
+.look-copy strong{
+  display:block;
+  margin-top:7px;
+  color:#0b2344;
+  font:500 23px/1 "Cormorant Garamond",serif;
+}
+.look-copy p{
+  margin:8px auto 0;
+  max-width:220px;
+  color:#78838e;
+  font:400 14px/1.35 "Cormorant Garamond",serif;
+}
+.dresscode-reference-note{
+  margin:18px auto 0;
+  max-width:470px;
+  color:#8a929a;
+  font:italic 13px/1.4 "Cormorant Garamond",serif;
+}
+
+@media(max-width:600px){
+  .dresscode-reference{
+    margin-top:28px;
+    padding-top:26px;
+  }
+  .dresscode-looks{
+    gap:10px;
+  }
+  .dress-look{
+    padding:14px 10px 16px;
+    border-radius:18px;
+  }
+  .look-illustration{
+    height:184px;
+  }
+  .look-illustration svg{
+    width:118px;
+    height:175px;
+  }
+  .look-copy strong{
+    font-size:20px;
+  }
+  .look-copy p{
+    font-size:12.5px;
+    line-height:1.28;
+  }
+}
+
+@media(max-width:390px){
+  .dresscode-looks{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+  .look-illustration{
+    height:190px;
+  }
+  .look-illustration svg{
+    width:125px;
+    height:182px;
+  }
+}
