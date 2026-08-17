@@ -6092,3 +6092,256 @@ body.locked{
     height:100px;
   }
 }
+
+
+/* v10.13 — RSVP: plazo de confirmación */
+.rsvp-deadline{
+  width:min(100%, 620px);
+  margin:0 auto 28px;
+  text-align:center;
+  color:var(--navy, #0b2a50);
+}
+.rsvp-deadline-kicker,
+.guest-note-kicker{
+  display:block;
+  margin-bottom:12px;
+  font-family:var(--font-sans, sans-serif);
+  font-size:.72rem;
+  font-weight:500;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--navy, #0b2a50);
+}
+.rsvp-deadline p{
+  margin:5px auto;
+  color:var(--muted, #718096);
+  font-family:var(--font-serif, serif);
+  font-size:clamp(1rem, 1.7vw, 1.16rem);
+  line-height:1.6;
+}
+.rsvp-deadline strong{
+  color:var(--gold, #bd8a32);
+  font-weight:600;
+}
+
+/* v10.13 — Lluvia de sobres + información para invitados */
+.guest-note-section{
+  min-height:auto !important;
+  padding:72px 24px;
+  background:var(--paper, #f8f5ee);
+}
+.guest-info-section{
+  padding-top:18px;
+}
+.guest-note-shell{
+  width:min(100%, 760px);
+  margin:0 auto;
+  padding:52px 46px;
+  text-align:center;
+  border:1px solid rgba(189,138,50,.38);
+  border-radius:34px;
+  background:rgba(255,255,255,.36);
+}
+.guest-note-symbol{
+  width:46px;
+  height:46px;
+  margin:4px auto 12px;
+  display:grid;
+  place-items:center;
+  font-family:Georgia,serif;
+  font-size:1.65rem;
+  color:var(--gold, #bd8a32);
+}
+.guest-note-shell h2{
+  margin:0 0 18px;
+  color:var(--navy, #0b2a50);
+  font-family:var(--font-serif, serif);
+  font-size:clamp(2rem, 4vw, 3.35rem);
+  font-weight:400;
+  line-height:1.05;
+}
+.guest-note-shell p{
+  max-width:590px;
+  margin:7px auto;
+  color:var(--muted, #718096);
+  font-family:var(--font-serif, serif);
+  font-size:clamp(1rem, 1.7vw, 1.16rem);
+  line-height:1.65;
+}
+.guest-note-shell strong{
+  color:var(--navy, #0b2a50);
+  font-weight:500;
+}
+@media(max-width:600px){
+  .rsvp-deadline{
+    margin-bottom:22px;
+    padding:0 8px;
+  }
+  .guest-note-section{
+    padding:52px 18px;
+  }
+  .guest-info-section{
+    padding-top:8px;
+  }
+  .guest-note-shell{
+    padding:38px 22px;
+    border-radius:26px;
+  }
+}
+
+
+/* v10.15 — aviso visible de plazo RSVP */
+.rsvp .rsvp-deadline-visible{
+  display:block !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  transform:none !important;
+  width:min(100%,560px);
+  margin:24px auto 26px;
+  padding:20px 18px 21px;
+  box-sizing:border-box;
+  text-align:center;
+  border-top:1px solid rgba(183,137,63,.30);
+  border-bottom:1px solid rgba(183,137,63,.30);
+}
+.rsvp .rsvp-deadline-kicker{
+  display:block;
+  margin:0 0 10px;
+  color:#0b2344;
+  font-family:Montserrat,Arial,sans-serif;
+  font-size:.66rem;
+  font-weight:600;
+  line-height:1.4;
+  letter-spacing:.16em;
+}
+.rsvp .rsvp-deadline-visible p{
+  margin:5px auto;
+  color:#6f7c8a;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:1.04rem;
+  line-height:1.45;
+}
+.rsvp .rsvp-deadline-visible strong{
+  color:#b7893f;
+  font-weight:600;
+}
+.rsvp .rsvp-deadline-sub{
+  font-size:.95rem !important;
+}
+@media(max-width:600px){
+  .rsvp .rsvp-deadline-visible{
+    margin:20px auto 22px;
+    padding:18px 10px 19px;
+  }
+}
+
+
+/* =========================================================
+   v10.16 — CAPA FINAL DE REFINAMIENTO Y ESTABILIZACIÓN
+   No redefine el concepto visual: corrige comportamiento,
+   responsive, accesibilidad y coherencia de interacción.
+   ========================================================= */
+
+*,*::before,*::after{
+  box-sizing:border-box;
+}
+
+html{
+  width:100%;
+  max-width:100%;
+  overflow-x:clip;
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  width:100%;
+  max-width:100%;
+  overflow-x:clip;
+}
+
+img,svg{
+  max-width:100%;
+}
+
+button,
+input{
+  font:inherit;
+}
+
+button{
+  -webkit-tap-highlight-color:transparent;
+}
+
+button:focus-visible,
+input:focus-visible{
+  outline:2px solid rgba(183,137,63,.78);
+  outline-offset:3px;
+}
+
+/* Mantener objetivos táctiles cómodos sin agrandar visualmente los iconos. */
+.journey-cta,
+.ceremony-location,
+#rsvpButton,
+.closing-actions button{
+  min-height:46px;
+}
+
+/* El CTA real de RSVP permanece inequívocamente centrado. */
+.form-card #rsvpButton{
+  display:flex !important;
+  width:max-content !important;
+  max-width:100% !important;
+  margin:24px auto 4px !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+/* Evita que el contenido del acordeón sobresalga durante la animación. */
+.info-accordion .accordion-panel{
+  overflow:hidden;
+  transition:max-height .32s ease;
+}
+
+/* El sello fotográfico no debe generar anchura extra en Safari. */
+.navy-opening .seal-photo-image{
+  max-width:none !important;
+}
+
+/* La primera pantalla usa el viewport dinámico del navegador móvil. */
+@media(max-width:600px){
+  #opening{
+    min-height:100dvh !important;
+    height:100dvh !important;
+    overflow:hidden !important;
+  }
+
+  .scene{
+    max-width:100vw;
+  }
+
+  .content{
+    max-width:100%;
+  }
+
+  .journey-cta,
+  .ceremony-location,
+  #rsvpButton{
+    min-height:48px;
+  }
+}
+
+/* Menos movimiento cuando el dispositivo lo solicita. */
+@media(prefers-reduced-motion:reduce){
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+}

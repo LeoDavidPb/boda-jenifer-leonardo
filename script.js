@@ -2,7 +2,7 @@ const body=document.body,opening=document.getElementById("opening"),envelope=doc
 
 function showToast(m){toast.textContent=m;toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),2300)}
 
-openButton.addEventListener("click",()=>{if(opened)return;opened=true;envelope.classList.add("open");opening.classList.add("opening-active");opening.classList.add("opening-transition");setTimeout(()=>natureStage.classList.add("active"),650);setTimeout(()=>envelope.classList.add("fade"),1850);setTimeout(()=>{body.classList.remove("locked");story.classList.add("visible");story.scrollIntoView({behavior:"smooth",block:"start"})},3900)});
+openButton.addEventListener("click",()=>{if(opened)return;opened=true;envelope.classList.add("open");opening.classList.add("opening-active");opening.classList.add("opening-transition");setTimeout(()=>natureStage.classList.add("active"),500);setTimeout(()=>envelope.classList.add("fade"),1550);setTimeout(()=>{body.classList.remove("locked");story.classList.add("visible");story.scrollIntoView({behavior:"smooth",block:"start"})},3300)});
 
 document.querySelectorAll(".next").forEach(b=>b.addEventListener("click",()=>{const t=document.getElementById(b.dataset.next);t.classList.add("visible");t.scrollIntoView({behavior:"smooth",block:"start"})}));
 const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&opened)e.target.classList.add("visible")}),{threshold:.27});document.querySelectorAll(".scene:not(#opening)").forEach(s=>observer.observe(s));
@@ -18,6 +18,14 @@ rsvpForm.addEventListener("submit",()=>{
   const button=document.getElementById("rsvpButton");
   button.disabled=true;
   button.textContent="ENVIANDO…";
+  window.setTimeout(()=>{
+    if(submitted && !rsvpForm.hidden){
+      button.disabled=false;
+      button.textContent="CONFIRMAR ASISTENCIA";
+      submitted=false;
+      showToast("No pudimos confirmar el envío. Intenta nuevamente.");
+    }
+  },12000);
 });
 document.getElementById("hidden_iframe").addEventListener("load",()=>{
   if(!submitted) return;
@@ -45,6 +53,7 @@ document.querySelectorAll(".accordion-item").forEach(btn=>{
   btn.addEventListener("click",()=>{
     const panel=btn.nextElementSibling;
     const isOpen=btn.classList.toggle("open");
+    btn.setAttribute("aria-expanded",String(isOpen));
     panel.style.maxHeight=isOpen?panel.scrollHeight+"px":"0px";
   });
 });
@@ -53,15 +62,15 @@ document.querySelectorAll(".accordion-item").forEach(btn=>{
 document.getElementById("calendarButton").addEventListener("click",()=>{
   const ics=`BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Jenifer y Leonardo//Boda//ES
+PRODID:-//Jeni y Leo//Boda//ES
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
 UID:boda-jenifer-leonardo-20261212@example.local
 DTSTAMP:20260809T000000Z
 DTSTART:20261213T000000Z
-SUMMARY:Boda de Jenifer & Leonardo
+SUMMARY:Boda de Jeni & Leo
 LOCATION:Parroquia de San Felipe Apóstol\, Cra. 32 #71 Sur-182\, La Doctora\, Sabaneta\, Antioquia
-DESCRIPTION:Ceremonia de la boda de Jenifer & Leonardo a las 7:00 p. m. en la Parroquia de San Felipe Apóstol. La ubicación de la recepción se compartirá cuando esté confirmada.
+DESCRIPTION:Ceremonia de la boda de Jeni & Leo a las 7:00 p. m. en la Parroquia de San Felipe Apóstol. La ubicación de la recepción se compartirá cuando esté confirmada.
 END:VEVENT
 END:VCALENDAR`;
   const blob=new Blob([ics],{type:"text/calendar;charset=utf-8"});
@@ -93,7 +102,7 @@ openingObserver.observe(document.getElementById("opening"));
 // V9: native share when available, otherwise copy current URL.
 document.getElementById("shareButton").addEventListener("click",async()=>{
   const shareData={
-    title:"Jenifer & Leonardo — Nuestra boda",
+    title:"Jeni & Leo — Nuestra boda",
     text:"12 de diciembre de 2026 · Medellín, Colombia",
     url:window.location.href
   };

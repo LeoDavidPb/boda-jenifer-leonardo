@@ -2,9 +2,9 @@
 <html lang="es">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f6f1e9"><title>Jenifer & Leonardo — 12.12.2026</title>
-<meta name="description" content="Invitación de boda de Jenifer & Leonardo · 12 de diciembre de 2026 · Medellín, Colombia">
-<meta property="og:title" content="Jenifer & Leonardo — Nuestra boda">
+<meta name="theme-color" content="#f6f1e9"><title>Jeni & Leo — 12.12.2026</title>
+<meta name="description" content="Invitación de boda de Jeni & Leo · 12 de diciembre de 2026 · Medellín, Colombia">
+<meta property="og:title" content="Jeni & Leo — Nuestra boda">
 <meta property="og:description" content="12 de diciembre de 2026 · Medellín, Colombia">
 <meta property="og:type" content="website">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -24,10 +24,10 @@
 
 <section class="scene opening navy-opening" id="opening">
 <div class="texture"></div><div class="botanical bot-a"></div><div class="botanical bot-b"></div>
-<div class="envelope" id="envelope"><div class="card"><small>NUESTRA BODA</small><b>J <i>&</i> L</b><span>12 · 12 · 2026</span></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="bottom"></div><button id="openButton" class="seal monogram-open seal-photo" aria-label="Abrir invitación">
+<div class="envelope" id="envelope"><div class="card"><small>NUESTRA BODA</small><b>J <i>&</i> L</b><span>12 · 12 · 2026</span></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="bottom"></div><button id="openButton" class="seal monogram-open seal-photo" type="button" aria-label="Abrir invitación">
 <img src="sello-jl-dorado.png" alt="" class="seal-photo-image" aria-hidden="true">
 </button></div>
-<div class="opening-copy opening-copy-minimal"><p>UNA INVITACIÓN PARA TI</p><small>Toca el monograma para comenzar</small></div><div class="opening-veil" id="openingVeil"></div>
+<div class="opening-copy opening-copy-minimal"><p>UNA INVITACIÓN PARA TI</p><small>Toca el sello para comenzar</small></div><div class="opening-veil" id="openingVeil"></div>
 <div class="nature-stage" id="natureStage" aria-hidden="true">
   <div class="soft-bloom bloom-a"></div>
   <div class="soft-bloom bloom-b"></div>
@@ -94,7 +94,7 @@
   </div>
 </section>
 
-<section class="scene couple couple-refined" id="couple"><div class="texture"></div><div class="content reveal"><p class="eyebrow dark">NUESTRA BODA</p><h2 class="names"><span>Jenifer</span><em>&</em><span>Leonardo</span></h2><div class="rule"></div><p class="serif-copy">Queremos compartir contigo<br>uno de los días más especiales de nuestra historia.</p><button class="pill light next journey-cta journey-cta-light" data-next="date">Descubrir la fecha ↓</button></div></section>
+<section class="scene couple couple-refined" id="couple"><div class="texture"></div><div class="content reveal"><p class="eyebrow dark">NUESTRA BODA</p><h2 class="names"><span>Jeni</span><em>&</em><span>Leo</span></h2><div class="rule"></div><p class="serif-copy">Queremos compartir contigo<br>uno de los días más especiales de nuestra historia.</p><button class="pill light next journey-cta journey-cta-light" data-next="date">Descubrir la fecha ↓</button></div></section>
 
 <div class="scene-divider" aria-hidden="true"><span>✦</span></div>
 
@@ -125,7 +125,7 @@
     <p class="classic-month">DICIEMBRE</p>
 
     <div class="classic-date-lockup" aria-label="Sábado 12 de diciembre de 2026">
-      <div class="classic-side classic-day-name"><span>SÁBADO</span></div>
+      <div class="classic-side classic-day-name"><span>Sábado</span></div>
       <div class="classic-day-number">12</div>
       <div class="classic-side classic-year"><span>2026</span></div>
     </div>
@@ -455,19 +455,23 @@
   </div>
 </section>
 
-<section class="scene rsvp" id="rsvp"><div class="texture"></div><div class="rsvp-leaf"></div><div class="content reveal"><p class="eyebrow dark">RSVP</p><h3>¿Nos acompañas?</h3><p class="serif-copy">Tu presencia hará este día aún más especial.<br>Confírmanos cuando estés listo.</p>
+<section class="scene rsvp" id="rsvp"><div class="texture"></div><div class="rsvp-leaf"></div><div class="content reveal"><p class="eyebrow dark">RSVP</p><h3>¿Nos acompañas?</h3><p class="serif-copy">Tu presencia hará este día aún más especial.<br>Tu respuesta nos ayudará a preparar cada detalle.</p>
+<div class="rsvp-deadline-visible">
+  <span class="rsvp-deadline-kicker">TU RESPUESTA ES IMPORTANTE PARA NOSOTROS</span>
+  <p>Te agradecemos confirmar tu asistencia dentro de los próximos <strong>5 días</strong>.</p>
+  <p class="rsvp-deadline-sub">Así podremos preparar cada detalle para recibirte como mereces.</p>
+</div>
 <form class="form-card" id="rsvpForm" action="https://docs.google.com/forms/d/e/1FAIpQLSfUx-EkVy6KEdTn_hmSRazsdYYh2_uUxktUYPFf0kNfU9oOyQ/formResponse" method="POST" target="hidden_iframe">
 <label>Nombre completo<input id="guestName" name="entry.694340333" type="text" placeholder="Escribe tu nombre" required autocomplete="name"></label>
 <fieldset class="attendance-group"><legend>¿Nos acompañarás?</legend><label class="choice"><input type="radio" name="entry.2029865180" value="Si" required><span>Sí, allí estaré</span></label><label class="choice"><input type="radio" name="entry.2029865180" value="No" required><span>No podré acompañarlos</span></label></fieldset>
 <button class="primary journey-cta journey-cta-primary" id="rsvpButton" type="submit">CONFIRMAR ASISTENCIA</button>
 </form>
-<div class="rsvp-success" id="rsvpSuccess" hidden><p class="success-mark">✓</p><h4>¡Gracias por responder!</h4><p>Hemos recibido tu confirmación.</p><span>Jenifer & Leonardo</span></div>
+<div class="rsvp-success" id="rsvpSuccess" hidden><p class="success-mark">✓</p><h4>¡Gracias por responder!</h4><p>Hemos recibido tu confirmación.</p><span>Jeni & Leo</span></div>
 <iframe name="hidden_iframe" id="hidden_iframe" title="Envío RSVP" style="display:none"></iframe>
 <button class="text-next next rsvp-next journey-cta journey-cta-light" data-next="info">Continuar ↓</button></div></section>
 
 
 <div class="scene-divider" aria-hidden="true"><span>✦</span></div>
-
 <section class="scene info-scene info-editorial" id="info">
   <div class="info-paper" aria-hidden="true"></div>
 
@@ -482,7 +486,7 @@
     </p>
 
     <div class="accordion info-accordion">
-      <button class="accordion-item" type="button">
+      <button class="accordion-item" type="button" aria-expanded="false">
         <span>¿A qué hora debo llegar?</span><i>+</i>
       </button>
       <div class="accordion-panel">
@@ -491,7 +495,7 @@
         </p>
       </div>
 
-      <button class="accordion-item" type="button">
+      <button class="accordion-item" type="button" aria-expanded="false">
         <span>¿Dónde será la ceremonia?</span><i>+</i>
       </button>
       <div class="accordion-panel">
@@ -500,7 +504,7 @@
         </p>
       </div>
 
-      <button class="accordion-item" type="button">
+      <button class="accordion-item" type="button" aria-expanded="false">
         <span>¿Dónde será la recepción?</span><i>+</i>
       </button>
       <div class="accordion-panel">
@@ -509,12 +513,21 @@
         </p>
       </div>
 
-      <button class="accordion-item" type="button">
-        <span>¿Habrá más información?</span><i>+</i>
+      <button class="accordion-item" type="button" aria-expanded="false">
+        <span>¿Tendrán lista de regalos?</span><i>+</i>
       </button>
       <div class="accordion-panel">
         <p>
-          Sí. Si necesitamos compartir indicaciones de parqueadero, transporte u otro detalle práctico, aparecerán aquí antes de la boda.
+          Tu presencia es nuestro mejor regalo. Si deseas tener un detalle con nosotros, tendremos <strong>lluvia de sobres</strong>.
+        </p>
+      </div>
+
+      <button class="accordion-item" type="button" aria-expanded="false">
+        <span>¿Hay parqueadero?</span><i>+</i>
+      </button>
+      <div class="accordion-panel">
+        <p>
+          No contamos con parqueadero preferencial. En el sector encontrarás <strong>espacios públicos y parqueaderos cercanos con servicio de pago</strong>.
         </p>
       </div>
     </div>

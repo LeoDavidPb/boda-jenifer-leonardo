@@ -136,3 +136,14 @@ Se agregó una sección independiente de Código de vestimenta entre Itinerario 
 
 
 Código de vestimenta ampliado: se añadieron referencias visuales vectoriales para dama y caballero, con estilo formal/elegante y aclaración de que son orientativas, no looks obligatorios.
+
+
+## v10.16 — Refinamiento final
+- Consistencia visible de nombres: Jeni & Leo.
+- Texto de apertura actualizado al sello fotográfico.
+- Apertura ligeramente más ágil.
+- RSVP con protección ante fallos de envío y CTA centrado.
+- Acordeones con estado accesible aria-expanded.
+- Estabilización responsive para Safari/iPhone y prevención de overflow horizontal.
+- Mejoras de focus y reducción de movimiento.
+- No se modificó el cierre ni se añadió información de recepción pendiente.
