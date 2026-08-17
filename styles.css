@@ -4888,3 +4888,162 @@ section#emotional .emotional-next:active{
     margin-top:26px !important;
   }
 }
+
+/* =========================================================
+   CORRECCIÓN MOBILE — RESERVA LA FECHA CENTRADA
+   Evita desbordamiento horizontal y desplazamiento a la derecha.
+   ========================================================= */
+@media(max-width:600px){
+
+  .date-classic-focus,
+  .date-classic-focus .date-editorial-content{
+    width:100% !important;
+    max-width:100% !important;
+    box-sizing:border-box !important;
+    overflow-x:hidden !important;
+  }
+
+  .date-classic-focus .date-editorial-content{
+    padding-left:14px !important;
+    padding-right:14px !important;
+  }
+
+  .date-classic-focus .classic-date-lockup{
+    width:100% !important;
+    max-width:390px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    grid-template-columns:minmax(0,1fr) minmax(108px,132px) minmax(0,1fr) !important;
+    box-sizing:border-box !important;
+  }
+
+  .date-classic-focus .classic-side{
+    min-width:0 !important;
+    overflow:hidden !important;
+  }
+
+  .date-classic-focus .classic-day-number{
+    margin-left:8px !important;
+    margin-right:8px !important;
+    min-width:0 !important;
+  }
+
+  .date-classic-focus .hybrid-countdown{
+    width:100% !important;
+    max-width:390px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    padding:0 !important;
+    box-sizing:border-box !important;
+    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+    gap:5px !important;
+  }
+
+  .date-classic-focus .hybrid-count-card{
+    min-width:0 !important;
+    width:auto !important;
+    max-width:100% !important;
+    padding-left:1px !important;
+    padding-right:1px !important;
+    box-sizing:border-box !important;
+    overflow:hidden !important;
+  }
+
+  .date-classic-focus .hybrid-count-card b{
+    width:100% !important;
+    max-width:100% !important;
+    justify-content:center !important;
+    text-align:center !important;
+    white-space:nowrap !important;
+    font-size:clamp(29px,8.3vw,40px) !important;
+  }
+
+  .date-classic-focus .hybrid-count-card span{
+    width:100% !important;
+    max-width:100% !important;
+    text-align:center !important;
+    white-space:nowrap !important;
+    font-size:5.5px !important;
+    letter-spacing:.045em !important;
+  }
+
+  .date-classic-focus .editorial-date-actions{
+    width:100% !important;
+    max-width:390px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    padding:0 !important;
+    box-sizing:border-box !important;
+  }
+
+  .date-classic-focus .editorial-date-actions .journey-cta{
+    width:100% !important;
+    max-width:100% !important;
+    box-sizing:border-box !important;
+  }
+}
+
+html, body{
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+
+/* =========================================================
+   CEREMONIA — JERARQUÍA DE ACCIONES
+   Continuar = acción principal / Cómo llegar = secundaria.
+   ========================================================= */
+.ceremony-actions{
+  width:min(100%, 520px);
+  margin:34px auto 0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+}
+
+.ceremony-actions .ceremony-primary-action{
+  order:1;
+  min-width:260px;
+  padding:18px 34px;
+  background:#0d2b52 !important;
+  color:#fffdf7 !important;
+  border:1px solid #0d2b52 !important;
+  box-shadow:0 12px 28px rgba(13,43,82,.13);
+}
+
+.ceremony-actions .ceremony-secondary-action{
+  order:2;
+  min-width:240px;
+  margin:0 !important;
+  padding:15px 28px;
+  background:transparent !important;
+  color:#0d2b52 !important;
+  border:1px solid rgba(190,137,45,.78) !important;
+  box-shadow:none !important;
+}
+
+.ceremony-actions .ceremony-secondary-action .pin-icon{
+  color:#be892d;
+}
+
+.ceremony-actions .ceremony-location-note{
+  order:3;
+  margin:0 !important;
+}
+
+@media(max-width:600px){
+  .ceremony-actions{
+    width:100%;
+    max-width:360px;
+    margin-top:28px;
+    gap:12px;
+  }
+
+  .ceremony-actions .ceremony-primary-action,
+  .ceremony-actions .ceremony-secondary-action{
+    width:min(100%, 300px);
+    min-width:0;
+    box-sizing:border-box;
+  }
+}

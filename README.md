@@ -121,3 +121,6 @@ Nuevo sello V6: lacre minimalista con silueta orgánica irregular, tono dorado e
 
 
 Nuevo sello V7: cierre híbrido con cinta fina dorada y pequeño núcleo tipo lacre, más simple y elegante. También se ajustó el espaciado de 'Nuestra boda' para separar el título de los nombres y mejorar la jerarquía visual.
+
+
+Corrección móvil: Reserva la fecha se limita a 100%/390px, el conteo y botones quedan centrados, y se elimina el overflow horizontal en Safari/iPhone.

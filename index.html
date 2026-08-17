@@ -209,17 +209,21 @@
       </div>
     </div>
 
-    <button class="ceremony-location" id="locationButton" type="button">
-      <span class="pin-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z"/><circle cx="12" cy="10" r="2.2"/></svg>
-      </span>
-      Cómo llegar
-      <span aria-hidden="true">↗</span>
-    </button>
+    <div class="ceremony-actions">
+      <button class="text-next next ceremony-next ceremony-primary-action journey-cta journey-cta-dark" data-next="reception">
+        Continuar <span aria-hidden="true">↓</span>
+      </button>
 
-    <p class="ceremony-location-note">La Doctora · Sabaneta · Antioquia</p>
+      <button class="ceremony-location ceremony-secondary-action" id="locationButton" type="button">
+        <span class="pin-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z"/><circle cx="12" cy="10" r="2.2"/></svg>
+        </span>
+        Cómo llegar
+        <span aria-hidden="true">↗</span>
+      </button>
 
-    <button class="text-next next ceremony-next journey-cta journey-cta-light" data-next="reception">Continuar ↓</button>
+      <p class="ceremony-location-note">La Doctora · Sabaneta · Antioquia</p>
+    </div>
   </div>
 </section>
 
